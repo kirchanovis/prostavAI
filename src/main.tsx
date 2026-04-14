@@ -5,6 +5,7 @@ import App from './App.tsx';
 // Ant Design base styles
 import 'antd/dist/reset.css';
 import './styles/typography.scss';
+import './styles/colors.scss';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
