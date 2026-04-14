@@ -6,4 +6,5 @@ export { IconFacebook } from './IconFacebook';
 export { IconLike } from './IconLike';
 export { IconHistory } from './IconHistory';
 export { IconOk } from './IconOk';
+export { IconPlay } from './IconPlay';
 export type { IconProps } from './IconChat';
