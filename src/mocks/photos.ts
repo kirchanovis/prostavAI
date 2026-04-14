@@ -1,0 +1,68 @@
+export const photosData = [
+  {
+    id: 1,
+    imageUrl: 'https://example.com/photo1.jpg',
+    title: 'Главная площадь города',
+    description: 'Красивый фонтан на главной площади города',
+    author: 'Иван Иванов',
+    date: '2022-05-10T12:30:00.000Z',
+  },
+  {
+    id: 2,
+    imageUrl: 'https://example.com/photo2.jpg',
+    title: 'Концерт на стадионе',
+    description: 'Музыкальный концерт на стадионе',
+    author: 'Анна Петрова',
+    date: '2022-05-11T18:00:00.000Z',
+  },
+  {
+    id: 3,
+    imageUrl: 'https://example.com/photo3.jpg',
+    title: 'Парад на улице Ленина',
+    description: 'Парад к Дню Победы на улице Ленина',
+    author: 'Петр Сидоров',
+    date: '2022-05-09T10:00:00.000Z',
+  },
+  {
+    id: 4,
+    imageUrl: 'https://example.com/photo4.jpg',
+    title: 'Красивый закат над городом',
+    description: 'Закат на реке в центре города',
+    author: 'Елена Козлова',
+    date: '2022-05-10T20:30:00.000Z',
+  },
+  {
+    id: 5,
+    imageUrl: 'https://example.com/photo5.jpg',
+    title: 'Выставка в музее',
+    description: 'Выставка картин в музее имени Лермонтова',
+    author: 'Дмитрий Иванов',
+    date: '2022-05-12T14:00:00.000Z',
+  },
+  {
+    id: 6,
+    imageUrl: 'https://example.com/photo6.jpg',
+    title: 'Фестиваль на площади имени Мира',
+    description: 'Фестиваль на площади имени Мира',
+    author: 'Ольга Николаева',
+    date: '2022-05-11T20:00:00.000Z',
+  },
+  {
+    id: 7,
+    imageUrl: 'https://example.com/photo7.jpg',
+    title: 'Выставка цветов',
+    description: 'Выставка цветов в парке культуры и отдыха',
+    author: 'Алексей Кузнецов',
+    date: '2022-05-13T11:00:00.000Z',
+  },
+  {
+    id: 8,
+    imageUrl: 'https://example.com/photo8.jpg',
+    title: 'Автосалон',
+    description: 'Показ новых моделей автомобилей в автосалоне',
+    author: 'Владимир Смирнов',
+    date: '2022-05-13T11:00:00.000Z',
+  },
+] as const;
+
+export type PhotoItem = (typeof photosData)[number];
