@@ -1,0 +1,13 @@
+export { IconChat } from './IconChat';
+export { IconClock } from './IconClock';
+export { IconError } from './IconError';
+export { IconEye } from './IconEye';
+export { IconFacebook } from './IconFacebook';
+export { IconLike } from './IconLike';
+export { IconHistory } from './IconHistory';
+export { IconOk } from './IconOk';
+export { IconPlay } from './IconPlay';
+export { IconSuccess } from './IconSuccess';
+export { IconTwitter } from './IconTwitter';
+export { IconVk } from './IconVk';
+export type { IconProps } from './IconChat';
