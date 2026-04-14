@@ -1,0 +1,61 @@
+:root {
+  --font-family-base: 'Fira Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+
+  /* 1) H1: Bold 42px */
+  --typo-h1-size: 42px;
+  --typo-h1-weight: 700;
+  --typo-h1-style: normal;
+  --typo-h1-line-height: 1.2;
+
+  /* 2) H2: Bold 24px */
+  --typo-h2-size: 24px;
+  --typo-h2-weight: 700;
+  --typo-h2-style: normal;
+  --typo-h2-line-height: 1.25;
+
+  /* 3) H3: Medium 21px */
+  --typo-h3-size: 21px;
+  --typo-h3-weight: 500;
+  --typo-h3-style: normal;
+  --typo-h3-line-height: 1.3;
+
+  /* 4) Body: Regular 21px */
+  --typo-body-size: 21px;
+  --typo-body-weight: 400;
+  --typo-body-style: normal;
+  --typo-body-line-height: 1.5;
+
+  /* 5) H4: Medium 16px */
+  --typo-h4-size: 16px;
+  --typo-h4-weight: 500;
+  --typo-h4-style: normal;
+  --typo-h4-line-height: 1.3;
+
+  /* 6) Comment: Semibold Italic 21px */
+  --typo-comment-size: 21px;
+  --typo-comment-weight: 600;
+  --typo-comment-style: italic;
+  --typo-comment-line-height: 1.5;
+
+  /* 7) News caption: Regular 16px */
+  --typo-news-caption-size: 16px;
+  --typo-news-caption-weight: 400;
+  --typo-news-caption-style: normal;
+  --typo-news-caption-line-height: 1.4;
+
+  /* 8) Home caption: Medium 12px */
+  --typo-home-caption-size: 12px;
+  --typo-home-caption-weight: 500;
+  --typo-home-caption-style: normal;
+  --typo-home-caption-line-height: 1.4;
+
+  /* 9) Small caption: Regular 12px */
+  --typo-caption-size: 12px;
+  --typo-caption-weight: 400;
+  --typo-caption-style: normal;
+  --typo-caption-line-height: 1.4;
+}
+
+html, body {
+  font-family: var(--font-family-base);
+}
