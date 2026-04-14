@@ -11,7 +11,7 @@ const items = [
   { key: '/history', label: 'История Ставрополья' },
 ] as const;
 
-export function TopNav() {
+export function TopNav({ className }: { className?: string }) {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -29,6 +29,7 @@ export function TopNav() {
       selectedKeys={selectedKeys}
       items={items.map((i) => ({ key: i.key, label: i.label }))}
       onClick={(e) => navigate(e.key)}
+      className={className}
       style={{ flex: 1, minWidth: 0 }}
     />
   );

@@ -1,0 +1,51 @@
+/* Figma-like top navigation styles */
+
+.topHeader {
+  background: var(--color-bg-light);
+  padding: 0;
+  height: 72px;
+  line-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand {
+  padding-left: 24px;
+  white-space: nowrap;
+  margin: 0;
+  color: var(--color-text-title);
+}
+
+.topMenu {
+  flex: 1;
+  min-width: 0;
+  border-bottom: none !important;
+  background: transparent;
+}
+
+.topMenu :global(.ant-menu-item) {
+  margin: 0 8px !important;
+  padding: 0 6px !important;
+  height: 72px;
+  line-height: 72px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.topMenu :global(.ant-menu-item:hover) {
+  color: var(--color-primary) !important;
+}
+
+.topMenu :global(.ant-menu-item-selected) {
+  color: var(--color-primary) !important;
+}
+
+.topMenu :global(.ant-menu-item::after) {
+  border-bottom: 2px solid transparent !important;
+}
+
+.topMenu :global(.ant-menu-item-selected::after) {
+  border-bottom-color: var(--color-primary) !important;
+}

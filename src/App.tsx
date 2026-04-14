@@ -4,17 +4,18 @@ import './App.css';
 import { TopNav } from './components/TopNav';
 import { HomePage } from './pages/HomePage';
 import { StubPage } from './pages/StubPage';
+import styles from './styles/menu.module.scss';
 
 const { Header, Content, Footer } = Layout;
 
 export default function App() {
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Header style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-        <Typography.Title level={3} style={{ color: '#fff', margin: 0, whiteSpace: 'nowrap' }}>
+      <Header className={styles.topHeader}>
+        <Typography.Title level={3} className={styles.brand}>
           Ставрополь — Новости
         </Typography.Title>
-        <TopNav />
+        <TopNav className={styles.topMenu} />
       </Header>
 
       <Content style={{ padding: 24, maxWidth: 1100, width: '100%', margin: '0 auto' }}>
