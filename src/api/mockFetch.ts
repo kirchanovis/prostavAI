@@ -1,3 +1,7 @@
+import { newsMockData } from '../mocks/news';
+import { photosData } from '../mocks/photos';
+import { reportData } from '../mocks/report';
+
 export type MockResponse<T> = {
   ok: boolean;
   status: number;
@@ -16,23 +20,27 @@ export async function mockFetch<T>(path: string, opts?: { delayMs?: number }): P
   const delayMs = opts?.delayMs ?? 250;
   await delay(delayMs);
 
-  // Add endpoints here
   if (path === '/api/news') {
-    const data = {
-      items: [
-        {
-          id: 'welcome',
-          title: 'Добро пожаловать на новостной портал Ставрополя',
-          excerpt: 'Здесь будут публиковаться городские новости, анонсы и важные объявления.',
-          publishedAt: new Date().toISOString(),
-        },
-      ],
-    };
-
     return {
       ok: true,
       status: 200,
-      json: async () => data as unknown as T,
+      json: async () => ({ items: newsMockData } as unknown as T),
+    };
+  }
+
+  if (path === '/api/photos') {
+    return {
+      ok: true,
+      status: 200,
+      json: async () => ({ items: photosData } as unknown as T),
+    };
+  }
+
+  if (path === '/api/report') {
+    return {
+      ok: true,
+      status: 200,
+      json: async () => ({ items: reportData } as unknown as T),
     };
   }
 
