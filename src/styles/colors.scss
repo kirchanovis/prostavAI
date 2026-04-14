@@ -1,0 +1,33 @@
+:root {
+  // brand / primary
+  --color-primary: #c26831; // activeColor
+
+  // backgrounds
+  --color-bg: #f6f1ee; // bg / bgColor
+  --color-bg-light: #ffffff; // lightBg
+
+  // text
+  --color-text: #5e514f; // mainTextColor / mainColor
+  --color-text-title: #826b60; // titleTextColor
+  --color-text-caption: #a79895; // captionTextColor
+  --color-text-comment: #9e8170; // commentTextColor
+  --color-text-on-image: #ffffff; // imageTextColor
+
+  // aliases from DS naming (optional but convenient)
+  --ds-mainColor: #5e514f;
+  --ds-bgColor: #f6f1ee;
+  --ds-activeColor: #c26831;
+  --ds-lightBg: #ffffff;
+  --ds-mainTextColor: #5e514f;
+  --ds-captionTextColor: #a79895;
+  --ds-activeTextColor: #c26831;
+  --ds-titleTextColor: #826b60;
+  --ds-commentTextColor: #9e8170;
+  --ds-imageTextColor: #ffffff;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
