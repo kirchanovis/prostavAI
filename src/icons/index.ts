@@ -8,4 +8,5 @@ export { IconHistory } from './IconHistory';
 export { IconOk } from './IconOk';
 export { IconPlay } from './IconPlay';
 export { IconSuccess } from './IconSuccess';
+export { IconTwitter } from './IconTwitter';
 export type { IconProps } from './IconChat';
