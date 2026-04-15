@@ -12,6 +12,19 @@
 
 .brand {
   padding-left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.brandTitle {
   white-space: nowrap;
   margin: 0;
   color: var(--color-text-title);
