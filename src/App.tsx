@@ -1,4 +1,4 @@
-import { Layout, Typography } from 'antd';
+import { Layout } from 'antd';
 import { Route, Routes } from 'react-router-dom';
 
 import './App.css';
@@ -15,10 +15,7 @@ export default function App() {
     <Layout style={{ minHeight: '100vh' }}>
       <Header className={styles.topHeader}>
         <div className={styles.brand}>
-          <img src={logo} className={styles.logo} alt="Ставрополь — Новости" />
-          <Typography.Title level={3} className={styles.brandTitle}>
-            Ставрополь — Новости
-          </Typography.Title>
+          <img src={logo} className={styles.logo} alt="Логотип" />
         </div>
         <TopNav className={styles.topMenu} />
       </Header>
