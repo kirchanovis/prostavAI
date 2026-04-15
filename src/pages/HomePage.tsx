@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
 import { Card, Image, List, Space, Tag, Typography } from 'antd';
+import { useEffect, useState } from 'react';
+
 import { mockFetch } from '../api/mockFetch';
 
 type NewsItem = {
