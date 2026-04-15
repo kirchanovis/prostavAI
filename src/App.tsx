@@ -5,6 +5,7 @@ import './App.css';
 import { TopNav } from './components/TopNav';
 import { HomePage } from './pages/HomePage';
 import { StubPage } from './pages/StubPage';
+import { UiKitPage } from './pages/UiKitPage';
 import styles from './styles/menu.module.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/articles" element={<StubPage title="Статьи" />} />
           <Route path="/photo-reports" element={<StubPage title="Фоторепортажи" />} />
           <Route path="/history" element={<StubPage title="История Ставрополья" />} />
+          <Route path="/ui" element={<UiKitPage />} />
           <Route path="*" element={<StubPage title="404" />} />
         </Routes>
       </Content>
