@@ -1,0 +1,68 @@
+.wrap {
+  width: 100%;
+}
+
+.comment {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  flex: 0 0 auto;
+}
+
+.bubble {
+  flex: 1;
+  background: var(--color-bg-light);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.author {
+  color: var(--color-text-title);
+  font-weight: 600;
+}
+
+.date {
+  color: var(--color-text-caption);
+  font-size: 12px;
+}
+
+.text {
+  color: var(--color-text);
+  margin: 0;
+}
+
+.actions {
+  margin-top: 8px;
+}
+
+.replyBtn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: var(--color-primary);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.replies {
+  margin-left: 52px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
