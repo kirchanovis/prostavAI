@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { TopNav } from './components/TopNav';
 import { HomePage } from './pages/HomePage';
+import { PhotoReportsPage } from './pages/PhotoReportsPage';
 import { StubPage } from './pages/StubPage';
 import styles from './styles/menu.module.scss';
 
@@ -26,7 +27,7 @@ export default function App() {
           <Route path="/krai" element={<StubPage title="Ставропольский край" />} />
           <Route path="/skfo" element={<StubPage title="СКФО" />} />
           <Route path="/articles" element={<StubPage title="Статьи" />} />
-          <Route path="/photo-reports" element={<StubPage title="Фоторепортажи" />} />
+          <Route path="/photo-reports" element={<PhotoReportsPage />} />
           <Route path="/history" element={<StubPage title="История Ставрополья" />} />
           <Route path="*" element={<StubPage title="404" />} />
         </Routes>

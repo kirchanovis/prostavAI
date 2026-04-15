@@ -1,0 +1,110 @@
+.mainCard {
+  background: var(--color-bg-light);
+  border-radius: 16px;
+}
+
+.mainArea {
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'prev image next'
+    'meta meta meta';
+  gap: 12px;
+  align-items: center;
+}
+
+.navBtn {
+  grid-area: prev;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--color-bg-light);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.navBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.navBtn:nth-of-type(2) {
+  grid-area: next;
+}
+
+.mainImageWrap {
+  grid-area: image;
+  width: 100%;
+  height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 220ms ease-in;
+}
+
+.mainImage :global(img) {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.metaRow {
+  grid-area: meta;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.metaLabel {
+  color: var(--color-text-caption);
+}
+
+.metaLeft,
+.metaRight {
+  background: var(--color-bg-light);
+}
+
+.thumbs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.thumbBtn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.thumbImg {
+  width: 96px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  display: block;
+}
+
+.thumbActive .thumbImg {
+  border-color: var(--color-primary);
+}
