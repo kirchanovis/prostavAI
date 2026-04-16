@@ -12,7 +12,7 @@
   color: var(--color-text-caption);
 }
 .mainPhoto {
-  width: 50%;
+  width: 65%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -60,7 +60,7 @@
 .mainPhotoMeta {
   grid-area: meta;
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 70% 30%;
   gap: 12px;
   align-items: start;
   color: var(--color-text-primary);
