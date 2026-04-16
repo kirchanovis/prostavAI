@@ -1,5 +1,6 @@
 import { Card, Divider, Space, Typography } from 'antd';
 
+import { PhotoGallery } from '../components/gallery/PhotoGallery';
 import {
   IconChat,
   IconClock,
@@ -14,6 +15,7 @@ import {
   IconTwitter,
   IconVk,
 } from '../icons';
+import { photosData } from '../mocks/photos';
 
 export function UiKitPage() {
   return (
@@ -87,55 +89,30 @@ export function UiKitPage() {
 
       <Card title="Icons" style={{ width: '100%' }}>
         <Space wrap size={16} align="center">
-          <Space direction="vertical" align="center">
-            <IconChat size={28} />
-            <Typography.Text type="secondary">chat</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconClock size={28} />
-            <Typography.Text type="secondary">clock</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconError size={28} />
-            <Typography.Text type="secondary">error</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconEye size={28} />
-            <Typography.Text type="secondary">eye</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconFacebook size={28} />
-            <Typography.Text type="secondary">facebook</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconHistory size={28} />
-            <Typography.Text type="secondary">history</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconLike size={28} />
-            <Typography.Text type="secondary">like</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconOk size={28} />
-            <Typography.Text type="secondary">ok</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconPlay size={28} />
-            <Typography.Text type="secondary">play</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconSuccess size={28} />
-            <Typography.Text type="secondary">success</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconTwitter size={28} />
-            <Typography.Text type="secondary">twitter</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconVk size={28} />
-            <Typography.Text type="secondary">vk</Typography.Text>
-          </Space>
+          {[
+            { name: 'chat', icon: <IconChat size={28} /> },
+            { name: 'clock', icon: <IconClock size={28} /> },
+            { name: 'error', icon: <IconError size={28} /> },
+            { name: 'eye', icon: <IconEye size={28} /> },
+            { name: 'facebook', icon: <IconFacebook size={28} /> },
+            { name: 'history', icon: <IconHistory size={28} /> },
+            { name: 'like', icon: <IconLike size={28} /> },
+            { name: 'ok', icon: <IconOk size={28} /> },
+            { name: 'play', icon: <IconPlay size={28} /> },
+            { name: 'success', icon: <IconSuccess size={28} /> },
+            { name: 'twitter', icon: <IconTwitter size={28} /> },
+            { name: 'vk', icon: <IconVk size={28} /> },
+          ].map(({ name, icon }) => (
+            <Space key={name} direction="vertical" align="center">
+              {icon}
+              <Typography.Text type="secondary">{name}</Typography.Text>
+            </Space>
+          ))}
         </Space>
+      </Card>
+
+      <Card title="PhotoGallery" style={{ width: '100%' }}>
+        <PhotoGallery items={photosData} />
       </Card>
     </Space>
   );
