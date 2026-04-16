@@ -1,5 +1,6 @@
 import { Card, Divider, Space, Typography } from 'antd';
 
+import { CommentsBlock } from '../components/comments/CommentsBlock';
 import { PhotoGallery } from '../components/gallery/PhotoGallery';
 import {
   IconChat,
@@ -16,6 +17,30 @@ import {
   IconVk,
 } from '../icons';
 import { photosData } from '../mocks/photos';
+
+import type { CommentItem } from '../mocks/comments';
+
+const demoComments: CommentItem[] = [
+  {
+    id: 'c1',
+    author: { name: 'Мария', avatarUrl: 'https://i.pravatar.cc/80?img=32' },
+    text: 'Классная новость! Хотелось бы больше подробностей.',
+    createdAt: '2022-04-05T10:15:00.000Z',
+  },
+  {
+    id: 'r1',
+    parentId: 'c1',
+    author: { name: 'Редакция', avatarUrl: 'https://i.pravatar.cc/80?img=5' },
+    text: 'Спасибо! Добавим детали, как только появится подтверждение.',
+    createdAt: '2022-04-05T11:05:00.000Z',
+  },
+  {
+    id: 'c2',
+    author: { name: 'Алексей', avatarUrl: 'https://i.pravatar.cc/80?img=12' },
+    text: 'А можно добавить карту и контакты организаторов?',
+    createdAt: '2022-04-05T10:40:00.000Z',
+  },
+];
 
 export function UiKitPage() {
   return (
@@ -113,6 +138,10 @@ export function UiKitPage() {
 
       <Card title="PhotoGallery" style={{ width: '100%' }}>
         <PhotoGallery items={photosData} />
+      </Card>
+
+      <Card title="Comments (for gallery)" style={{ width: '100%' }}>
+        <CommentsBlock items={demoComments} />
       </Card>
     </Space>
   );
