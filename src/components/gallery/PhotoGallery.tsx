@@ -29,7 +29,6 @@ export function PhotoGallery({ items }: { items: ReadonlyArray<PhotoItem> }) {
           </div>
           <div className={styles.metaRow}>
             <div className={styles.metaLeft}>
-              <Typography.Text className={styles.metaLabel}>Автор:</Typography.Text>{' '}
               <Typography.Text>{activeItem.author}</Typography.Text>
             </div>
             <div className={styles.metaRight}>
