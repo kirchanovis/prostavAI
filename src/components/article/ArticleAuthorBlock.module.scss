@@ -1,0 +1,36 @@
+.wrap {
+  width: 100%;
+  background: var(--color-bg-light);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.title {
+  color: var(--color-text-title);
+  font-weight: 600;
+}
+
+.sub {
+  color: var(--color-text-caption);
+  font-size: 12px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
