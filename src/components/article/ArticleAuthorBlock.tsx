@@ -1,5 +1,3 @@
-import { Typography } from 'antd';
-
 import styles from './ArticleAuthorBlock.module.scss';
 
 export function ArticleAuthorBlock({
@@ -16,8 +14,8 @@ export function ArticleAuthorBlock({
   return (
     <div className={styles.wrap}>
       <div className={styles.left}>
-        <Typography.Text className={styles.title}>Автор статьи: {authorName}</Typography.Text>
-        <Typography.Text className={styles.sub}>{date.toLocaleString()}</Typography.Text>
+        <div className={styles.title}>{authorName}</div>
+        <div className={styles.sub}>{date.toLocaleString()}</div>
       </div>
       <img className={styles.avatar} src={authorAvatarUrl} alt={authorName} />
     </div>
