@@ -93,6 +93,7 @@
 
 .min-photo__item,
 .minPhotoItem {
+  position: relative;
   border: none;
   background: transparent;
   padding: 0;
@@ -110,14 +111,29 @@
   border: 2px solid transparent;
   box-shadow: 0px 0px 7px rgba(71, 60, 56, 0.2);
   display: block;
-  filter: brightness(0.65);
   transition:
-    filter 160ms ease,
+    opacity 160ms ease,
     border-color 160ms ease;
+}
+
+.min-photo__item::after,
+.minPhotoItem::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #b2a399;
+  opacity: 0.45;
+  border-radius: 4px;
+  pointer-events: none;
+  transition: opacity 160ms ease;
+}
+
+.minPhotoItemActive::after,
+.min-photo__item--active::after {
+  opacity: 0;
 }
 
 .minPhotoItemActive .minPhotoImg,
 .min-photo__item--active .minPhoto__img {
   border-color: var(--color-primary);
-  filter: brightness(1);
 }
