@@ -16,37 +16,35 @@ export function PhotoGallery({ items }: { items: ReadonlyArray<PhotoItem> }) {
   }
 
   return (
-    <div className={styles.wrap}>
-      <div className={styles.mainCard}>
-        <div className={styles.mainArea}>
-          <div key={activeItem.id} className={styles.mainImageWrap}>
-            <img className={styles.mainImage} src={activeItem.imageUrl} alt={activeItem.title} />
-          </div>
+    <div className={styles.gallery}>
+      <div className={styles.mainPhoto}>
+        <div key={activeItem.id} className={styles.mainPhotoImgWrap}>
+          <img className={styles.mainPhotoImg} src={activeItem.imageUrl} alt={activeItem.title} />
+        </div>
 
-          <div className={styles.metaRow}>
-            <div className={styles.metaLeft}>
-              <span className={styles.metaLabel}>{activeItem.author}</span>
-            </div>
-            <div className={styles.metaRight}>
-              <span className={styles.metaLabel}>{activeItem.description}</span>
-            </div>
-          </div>
+        <div className={styles.mainPhotoMeta}>
+          <div className={styles.mainPhotoAuthor}>{activeItem.author}</div>
+          <div className={styles.mainPhotoDesc}>{activeItem.description}</div>
         </div>
       </div>
 
-      <div className={styles.thumbs}>
+      <div className={styles.minPhoto}>
         {safeItems.map((p) => {
           const active = p.id === activeItem.id;
           return (
-            <button
+            <div
               key={p.id}
-              type="button"
-              className={active ? `${styles.thumbBtn} ${styles.thumbActive}` : styles.thumbBtn}
+              role="button"
+              tabIndex={0}
+              className={active ? `${styles.minPhotoItem} ${styles.minPhotoItemActive}` : styles.minPhotoItem}
               onClick={() => setActiveId(p.id)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') setActiveId(p.id);
+              }}
               aria-label={`Открыть фото: ${p.title}`}
             >
-              <img className={styles.thumbImg} src={p.imageUrl} alt={p.title} />
-            </button>
+              <img className={styles.minPhotoImg} src={p.imageUrl} alt={p.title} />
+            </div>
           );
         })}
       </div>
