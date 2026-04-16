@@ -24,7 +24,7 @@ export function CommentsBlock({ items }: { items: CommentItem[] }) {
 
       <div className={styles.list}>
         {root.map((c) => (
-          <div key={c.id} className={styles.comment}>
+          <div key={c.id} className={`${styles.comment} _comment`}>
             <div className={styles.commentRow}>
               <img className={styles.avatar} src={c.author.avatarUrl} alt={c.author.name} />
               <div className={styles.bubble}>
