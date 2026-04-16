@@ -24,7 +24,7 @@ export function PhotoGallery({ items }: { items: ReadonlyArray<PhotoItem> }) {
 
         <div className={styles.mainPhotoMeta}>
           <div className={styles.mainPhotoDesc}>{activeItem.description}</div>
-          <div className={styles.mainPhotoAuthor}>{activeItem.author}</div>
+          <div className={styles.mainPhotoAuthor}>Фото {activeItem.author}</div>
         </div>
       </div>
 
