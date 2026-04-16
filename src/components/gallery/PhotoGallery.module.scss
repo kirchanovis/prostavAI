@@ -137,3 +137,22 @@
 .min-photo__item--active .minPhoto__img {
   border-color: var(--color-primary);
 }
+
+/* Scrollbar styling for thumbnails */
+.minPhoto {
+  scrollbar-color: var(--color-scrollbar) transparent;
+  scrollbar-width: thin;
+}
+
+.minPhoto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.minPhoto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.minPhoto::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  border-radius: 999px;
+}
