@@ -1,7 +1,7 @@
 export const photosData = [
   {
     id: 1,
-    imageUrl: 'https://i.imgur.com/XiixQ2D.jpg',
+    imageUrl: '/src/assets/photos/0093724560526005.jpg',
     title: 'Главная площадь города',
     description: 'Красивый фонтан на главной площади города',
     author: 'Иван Иванов',
@@ -9,7 +9,7 @@ export const photosData = [
   },
   {
     id: 2,
-    imageUrl: 'https://example.com/photo2.jpg',
+    imageUrl: '/src/assets/photos/AqI6FFiBDNE.jpg',
     title: 'Концерт на стадионе',
     description: 'Музыкальный концерт на стадионе',
     author: 'Анна Петрова',
@@ -17,7 +17,7 @@ export const photosData = [
   },
   {
     id: 3,
-    imageUrl: 'https://example.com/photo3.jpg',
+    imageUrl: '/src/assets/photos/den-goroda-stavropol-5.jpg',
     title: 'Парад на улице Ленина',
     description: 'Парад к Дню Победы на улице Ленина',
     author: 'Петр Сидоров',
@@ -25,7 +25,7 @@ export const photosData = [
   },
   {
     id: 4,
-    imageUrl: 'https://example.com/photo4.jpg',
+    imageUrl: '/src/assets/photos/IMG_1817.png',
     title: 'Красивый закат над городом',
     description: 'Закат на реке в центре города',
     author: 'Елена Козлова',
@@ -33,7 +33,7 @@ export const photosData = [
   },
   {
     id: 5,
-    imageUrl: 'https://example.com/photo5.jpg',
+    imageUrl: '/src/assets/photos/IMG_1835.png',
     title: 'Выставка в музее',
     description: 'Выставка картин в музее имени Лермонтова',
     author: 'Дмитрий Иванов',
@@ -41,7 +41,7 @@ export const photosData = [
   },
   {
     id: 6,
-    imageUrl: 'https://example.com/photo6.jpg',
+    imageUrl: '/src/assets/photos/IMG_1934.png',
     title: 'Фестиваль на площади имени Мира',
     description: 'Фестиваль на площади имени Мира',
     author: 'Ольга Николаева',
@@ -49,7 +49,7 @@ export const photosData = [
   },
   {
     id: 7,
-    imageUrl: 'https://example.com/photo7.jpg',
+    imageUrl: '/src/assets/photos/IMG_1936.png',
     title: 'Выставка цветов',
     description: 'Выставка цветов в парке культуры и отдыха',
     author: 'Алексей Кузнецов',
@@ -57,11 +57,27 @@ export const photosData = [
   },
   {
     id: 8,
-    imageUrl: 'https://example.com/photo8.jpg',
+    imageUrl: '/src/assets/photos/IMG_2244.png',
     title: 'Автосалон',
     description: 'Показ новых моделей автомобилей в автосалоне',
     author: 'Владимир Смирнов',
     date: '2022-05-13T11:00:00.000Z',
+  },
+  {
+    id: 9,
+    imageUrl: '/src/assets/photos/IMG_2530.png',
+    title: 'Городской пейзаж',
+    description: 'Панорама города в солнечный день',
+    author: 'Илья',
+    date: '2022-05-14T11:00:00.000Z',
+  },
+  {
+    id: 10,
+    imageUrl: '/src/assets/photos/IMG_2608.png',
+    title: 'Вечерний город',
+    description: 'Огни города вечером',
+    author: 'Илья',
+    date: '2022-05-14T12:00:00.000Z',
   },
 ] as const;
 
