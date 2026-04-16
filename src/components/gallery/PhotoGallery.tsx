@@ -1,4 +1,3 @@
-import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import { Card, Image, Space, Typography } from 'antd';
 import { useMemo, useState } from 'react';
 
@@ -12,19 +11,6 @@ export function PhotoGallery({ items }: { items: ReadonlyArray<PhotoItem> }) {
 
   const activeIndex = useMemo(() => safeItems.findIndex((i) => i.id === activeId), [activeId, safeItems]);
   const activeItem = safeItems[activeIndex] ?? safeItems[0];
-
-  const canPrev = activeIndex > 0;
-  const canNext = activeIndex >= 0 && activeIndex < safeItems.length - 1;
-
-  const goPrev = () => {
-    if (!canPrev) return;
-    setActiveId(safeItems[activeIndex - 1].id);
-  };
-
-  const goNext = () => {
-    if (!canNext) return;
-    setActiveId(safeItems[activeIndex + 1].id);
-  };
 
   if (!activeItem) {
     return (
