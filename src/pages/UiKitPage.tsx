@@ -3,7 +3,7 @@ import { Card, Divider, Space, Typography } from 'antd';
 import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
 import { PhotoGallery } from '../components/gallery/PhotoGallery';
-import { NewsCard } from '../components/news/NewsCard';
+import { TopNewsBlock } from '../components/news/TopNewsBlock';
 import {
   IconChat,
   IconClock,
@@ -20,6 +20,14 @@ import {
 } from '../icons';
 import { commentsMockData } from '../mocks/comments';
 import { photosData } from '../mocks/photos';
+
+const demoTopNewsTitles: string[] = [
+  'Открыта регистрация на весенний митап',
+  'В центре перекроют движение на выходных',
+  'Обновили дизайн-систему: новые токены и иконки',
+  'Запускаем новую рубрику с подборками недели',
+  'Фестиваль уличной еды возвращается в мае',
+];
 
 export function UiKitPage() {
   return (
@@ -131,12 +139,8 @@ export function UiKitPage() {
         />
       </Card>
 
-      <Card title="NewsCard" style={{ width: '100%' }}>
-        <NewsCard
-          category="События"
-          title="Открыта регистрация на весенний митап"
-          publishedAt="2026-04-17T10:15:00.000Z"
-        />
+      <Card title="Top news block" style={{ width: '100%' }}>
+        <TopNewsBlock titles={demoTopNewsTitles} />
       </Card>
     </Space>
   );
