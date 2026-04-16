@@ -38,18 +38,9 @@ export function PhotoGallery({ items }: { items: ReadonlyArray<PhotoItem> }) {
     <Space direction="vertical" size={12} style={{ width: '100%' }}>
       <Card className={styles.mainCard} bodyStyle={{ padding: 16 }}>
         <div className={styles.mainArea}>
-          <button className={styles.navBtn} onClick={goPrev} disabled={!canPrev} aria-label="Предыдущее фото">
-            <LeftOutlined />
-          </button>
-
           <div key={activeItem.id} className={styles.mainImageWrap}>
             <Image className={styles.mainImage} src={activeItem.imageUrl} alt={activeItem.title} preview={false} />
           </div>
-
-          <button className={styles.navBtn} onClick={goNext} disabled={!canNext} aria-label="Следующее фото">
-            <RightOutlined />
-          </button>
-
           <div className={styles.metaRow}>
             <div className={styles.metaLeft}>
               <Typography.Text className={styles.metaLabel}>Автор:</Typography.Text>{' '}
