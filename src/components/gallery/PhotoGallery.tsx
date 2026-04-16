@@ -1,4 +1,3 @@
-import { Card, Image, Space, Typography } from 'antd';
 import { useMemo, useState } from 'react';
 
 import styles from './PhotoGallery.module.scss';
@@ -13,31 +12,27 @@ export function PhotoGallery({ items }: { items: ReadonlyArray<PhotoItem> }) {
   const activeItem = safeItems[activeIndex] ?? safeItems[0];
 
   if (!activeItem) {
-    return (
-      <Card>
-        <Typography.Text type="secondary">Нет фотографий</Typography.Text>
-      </Card>
-    );
+    return <div className={styles.empty}>Нет фотографий</div>;
   }
 
   return (
-    <Space direction="vertical" size={12} style={{ width: '100%' }}>
-      <Card className={styles.mainCard} bodyStyle={{ padding: 16 }}>
+    <div className={styles.wrap}>
+      <div className={styles.mainCard}>
         <div className={styles.mainArea}>
           <div key={activeItem.id} className={styles.mainImageWrap}>
-            <Image className={styles.mainImage} src={activeItem.imageUrl} alt={activeItem.title} preview={false} />
+            <img className={styles.mainImage} src={activeItem.imageUrl} alt={activeItem.title} />
           </div>
+
           <div className={styles.metaRow}>
             <div className={styles.metaLeft}>
-              <Typography.Text>{activeItem.author}</Typography.Text>
+              <span className={styles.metaLabel}>{activeItem.author}</span>
             </div>
             <div className={styles.metaRight}>
-              <Typography.Text className={styles.metaLabel}>Описание:</Typography.Text>{' '}
-              <Typography.Text>{activeItem.description}</Typography.Text>
+              <span className={styles.metaLabel}>{activeItem.description}</span>
             </div>
           </div>
         </div>
-      </Card>
+      </div>
 
       <div className={styles.thumbs}>
         {safeItems.map((p) => {
@@ -45,6 +40,7 @@ export function PhotoGallery({ items }: { items: ReadonlyArray<PhotoItem> }) {
           return (
             <button
               key={p.id}
+              type="button"
               className={active ? `${styles.thumbBtn} ${styles.thumbActive}` : styles.thumbBtn}
               onClick={() => setActiveId(p.id)}
               aria-label={`Открыть фото: ${p.title}`}
@@ -54,6 +50,6 @@ export function PhotoGallery({ items }: { items: ReadonlyArray<PhotoItem> }) {
           );
         })}
       </div>
-    </Space>
+    </div>
   );
 }
