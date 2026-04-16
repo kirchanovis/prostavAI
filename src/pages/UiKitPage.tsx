@@ -1,5 +1,6 @@
 import { Card, Divider, Space, Typography } from 'antd';
 
+import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
 import { PhotoGallery } from '../components/gallery/PhotoGallery';
 import {
@@ -120,6 +121,14 @@ export function UiKitPage() {
 
       <Card title="Comments (for gallery)" style={{ width: '100%' }}>
         <CommentsBlock items={commentsMockData} />
+      </Card>
+
+      <Card title="ArticleAuthorBlock" style={{ width: '100%' }}>
+        <ArticleAuthorBlock
+          authorName="Иван Иванов"
+          authorAvatarUrl="https://i.pravatar.cc/80?img=8"
+          publishedAt="2022-04-05T09:30:00.000Z"
+        />
       </Card>
     </Space>
   );
