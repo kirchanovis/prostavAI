@@ -9,7 +9,7 @@
 .commentRow {
   display: flex;
   gap: 12px;
-  align-items: baseline;
+  padding: 5px 0;
 }
 
 .avatar {
@@ -22,7 +22,7 @@
 .bubble {
   flex: 1;
   border-radius: 14px;
-  padding: 12px 14px;
+  padding: 0 30px;
 }
 
 .meta {
@@ -62,7 +62,7 @@
 }
 
 .replies {
-  margin-left: 52px;
+  margin-left: 64px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
