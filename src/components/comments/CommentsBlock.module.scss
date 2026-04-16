@@ -82,3 +82,8 @@
   flex-direction: column;
   gap: 16px;
 }
+
+:global(.comments) {
+  background: var(--color-bg);
+  margin: 20px;
+}

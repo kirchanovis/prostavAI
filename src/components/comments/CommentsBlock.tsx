@@ -19,7 +19,7 @@ export function CommentsBlock({ items }: { items: CommentItem[] }) {
   }, [items]);
 
   return (
-    <div className={styles.comments}>
+    <div className="comments">
       <div className={styles.title}>Комментарии</div>
 
       <div className={styles.list}>
