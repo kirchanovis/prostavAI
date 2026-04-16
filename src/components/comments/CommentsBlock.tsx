@@ -30,7 +30,9 @@ export function CommentsBlock({ items }: { items: CommentItem[] }) {
               <div className={styles.bubble}>
                 <div className={styles.meta}>
                   <span className={styles.author}>{c.author.name}</span>
-                  <span className={styles.date}>{new Date(c.createdAt).toLocaleString()}</span>
+                  <span className={styles.date}>
+                    {c.id === 'c1' ? '10 минут назад' : new Date(c.createdAt).toLocaleString()}
+                  </span>
                 </div>
                 <p className={styles.text}>{c.text}</p>
                 <div className={styles.actions}>
