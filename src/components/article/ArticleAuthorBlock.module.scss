@@ -43,6 +43,15 @@
   color: var(--color-text-comment);
   font-size: 16px;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clock {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
 }
 
 .avatar {

@@ -1,3 +1,4 @@
+import { ClockIcon } from '../icons/ClockIcon';
 import styles from './ArticleAuthorBlock.module.scss';
 
 export function ArticleAuthorBlock({
@@ -35,7 +36,10 @@ export function ArticleAuthorBlock({
             Подписаться
           </button>
         </div>
-        <div className={styles.sub}>{publishedLabel}</div>
+        <div className={styles.sub}>
+          <ClockIcon className={styles.clock} />
+          <span>{publishedLabel}</span>
+        </div>
       </div>
     </div>
   );
