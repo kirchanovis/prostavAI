@@ -1,11 +1,13 @@
-import { Layout, Typography } from 'antd';
+import { Layout } from 'antd';
 import { Route, Routes } from 'react-router-dom';
 
 import './App.css';
+import logo from './assets/brand/logo.jpg';
 import { TopNav } from './components/TopNav';
 import { HomePage } from './pages/HomePage';
 import { PhotoReportsPage } from './pages/PhotoReportsPage';
 import { StubPage } from './pages/StubPage';
+import { UiKitPage } from './pages/UiKitPage';
 import styles from './styles/menu.module.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -14,9 +16,9 @@ export default function App() {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Header className={styles.topHeader}>
-        <Typography.Title level={3} className={styles.brand}>
-          Ставрополь — Новости
-        </Typography.Title>
+        <div className={styles.brand}>
+          <img src={logo} className={styles.logo} alt="Логотип" />
+        </div>
         <TopNav className={styles.topMenu} />
       </Header>
 
@@ -29,6 +31,7 @@ export default function App() {
           <Route path="/articles" element={<StubPage title="Статьи" />} />
           <Route path="/photo-reports" element={<PhotoReportsPage />} />
           <Route path="/history" element={<StubPage title="История Ставрополья" />} />
+          <Route path="/ui" element={<UiKitPage />} />
           <Route path="*" element={<StubPage title="404" />} />
         </Routes>
       </Content>
