@@ -1,0 +1,75 @@
+import { Space, Typography } from 'antd';
+import { useMemo } from 'react';
+
+import styles from './CommentsBlock.module.scss';
+
+import type { CommentItem } from '../../mocks/comments';
+
+export function CommentsBlock({ items }: { items: CommentItem[] }) {
+  const { root, repliesByParent } = useMemo(() => {
+    const rootComments = items.filter((c) => !c.parentId);
+    const replies = items.filter((c) => Boolean(c.parentId));
+
+    const map = new Map<string, CommentItem[]>();
+    replies.forEach((r) => {
+      const key = r.parentId as string;
+      map.set(key, [...(map.get(key) ?? []), r]);
+    });
+
+    return { root: rootComments, repliesByParent: map };
+  }, [items]);
+
+  return (
+    <div className={styles.wrap}>
+      <Typography.Title level={4} style={{ margin: 0 }}>
+        Комментарии
+      </Typography.Title>
+
+      <Space direction="vertical" size={16} style={{ width: '100%', marginTop: 12 }}>
+        {root.map((c) => (
+          <div key={c.id}>
+            <div className={styles.comment}>
+              <img className={styles.avatar} src={c.author.avatarUrl} alt={c.author.name} />
+              <div className={styles.bubble}>
+                <div className={styles.meta}>
+                  <span className={styles.author}>{c.author.name}</span>
+                  <span className={styles.date}>{new Date(c.createdAt).toLocaleString()}</span>
+                </div>
+                <p className={styles.text}>{c.text}</p>
+                <div className={styles.actions}>
+                  <button
+                    type="button"
+                    className={styles.replyBtn}
+                    onClick={() => {
+                      // Only replies to first-level comments (future: open reply input)
+                      void c.id;
+                    }}
+                  >
+                    Ответить
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {(repliesByParent.get(c.id) ?? []).length > 0 && (
+              <div className={styles.replies}>
+                {(repliesByParent.get(c.id) ?? []).map((r) => (
+                  <div key={r.id} className={styles.comment}>
+                    <img className={styles.avatar} src={r.author.avatarUrl} alt={r.author.name} />
+                    <div className={styles.bubble}>
+                      <div className={styles.meta}>
+                        <span className={styles.author}>{r.author.name}</span>
+                        <span className={styles.date}>{new Date(r.createdAt).toLocaleString()}</span>
+                      </div>
+                      <p className={styles.text}>{r.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </Space>
+    </div>
+  );
+}
