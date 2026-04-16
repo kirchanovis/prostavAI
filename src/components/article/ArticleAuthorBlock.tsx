@@ -29,7 +29,12 @@ export function ArticleAuthorBlock({
     <div className={styles.wrap}>
       <img className={styles.avatar} src={authorAvatarUrl} alt={authorName} />
       <div className={styles.left}>
-        <div className={styles.title}>{authorName}</div>
+        <div className={styles.titleRow}>
+          <span className={styles.title}>{authorName}</span>
+          <button type="button" className={styles.subscribeBtn}>
+            Подписаться
+          </button>
+        </div>
         <div className={styles.sub}>{publishedLabel}</div>
       </div>
     </div>
