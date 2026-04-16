@@ -1,7 +1,7 @@
 export const photosData = [
   {
     id: 1,
-    imageUrl: 'https://example.com/photo1.jpg',
+    imageUrl: 'https://i.imgur.com/XiixQ2D.jpg',
     title: 'Главная площадь города',
     description: 'Красивый фонтан на главной площади города',
     author: 'Иван Иванов',
