@@ -1,5 +1,8 @@
 import { Card, Divider, Space, Typography } from 'antd';
 
+import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
+import { CommentsBlock } from '../components/comments/CommentsBlock';
+import { PhotoGallery } from '../components/gallery/PhotoGallery';
 import {
   IconChat,
   IconClock,
@@ -14,6 +17,8 @@ import {
   IconTwitter,
   IconVk,
 } from '../icons';
+import { commentsMockData } from '../mocks/comments';
+import { photosData } from '../mocks/photos';
 
 export function UiKitPage() {
   return (
@@ -85,56 +90,43 @@ export function UiKitPage() {
         </Space>
       </Card>
 
+      <Card title="PhotoGallery" style={{ width: '100%' }}>
+        <PhotoGallery items={photosData} />
+      </Card>
+
+      <Card title="ArticleAuthorBlock" style={{ width: '100%' }}>
+        <ArticleAuthorBlock
+          authorName="Иван Иванов"
+          authorAvatarUrl="https://i.pravatar.cc/80?img=8"
+          publishedAt="2022-04-05T09:30:00.000Z"
+        />
+      </Card>
+
+      <Card title="CommentsBlock" style={{ width: '100%' }}>
+        <CommentsBlock items={commentsMockData} />
+      </Card>
+
       <Card title="Icons" style={{ width: '100%' }}>
         <Space wrap size={16} align="center">
-          <Space direction="vertical" align="center">
-            <IconChat size={28} />
-            <Typography.Text type="secondary">chat</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconClock size={28} />
-            <Typography.Text type="secondary">clock</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconError size={28} />
-            <Typography.Text type="secondary">error</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconEye size={28} />
-            <Typography.Text type="secondary">eye</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconFacebook size={28} />
-            <Typography.Text type="secondary">facebook</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconHistory size={28} />
-            <Typography.Text type="secondary">history</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconLike size={28} />
-            <Typography.Text type="secondary">like</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconOk size={28} />
-            <Typography.Text type="secondary">ok</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconPlay size={28} />
-            <Typography.Text type="secondary">play</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconSuccess size={28} />
-            <Typography.Text type="secondary">success</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconTwitter size={28} />
-            <Typography.Text type="secondary">twitter</Typography.Text>
-          </Space>
-          <Space direction="vertical" align="center">
-            <IconVk size={28} />
-            <Typography.Text type="secondary">vk</Typography.Text>
-          </Space>
+          {[
+            ['chat', <IconChat size={28} key="chat" />],
+            ['clock', <IconClock size={28} key="clock" />],
+            ['error', <IconError size={28} key="error" />],
+            ['eye', <IconEye size={28} key="eye" />],
+            ['facebook', <IconFacebook size={28} key="facebook" />],
+            ['history', <IconHistory size={28} key="history" />],
+            ['like', <IconLike size={28} key="like" />],
+            ['ok', <IconOk size={28} key="ok" />],
+            ['play', <IconPlay size={28} key="play" />],
+            ['success', <IconSuccess size={28} key="success" />],
+            ['twitter', <IconTwitter size={28} key="twitter" />],
+            ['vk', <IconVk size={28} key="vk" />],
+          ].map(([name, icon]) => (
+            <Space key={name} direction="vertical" align="center">
+              {icon}
+              <Typography.Text type="secondary">{name}</Typography.Text>
+            </Space>
+          ))}
         </Space>
       </Card>
     </Space>
