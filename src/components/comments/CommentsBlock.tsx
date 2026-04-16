@@ -20,15 +20,17 @@ export function CommentsBlock({ items }: { items: CommentItem[] }) {
   }, [items]);
 
   return (
-    <div className={styles.wrap}>
-      <Typography.Title level={4} style={{ margin: 0 }}>
-        Комментарии
-      </Typography.Title>
+    <div className={styles.comments}>
+      <div className={styles.title}>
+        <Typography.Title level={4} style={{ margin: 0 }}>
+          Комментарии
+        </Typography.Title>
+      </div>
 
-      <Space direction="vertical" size={16} style={{ width: '100%', marginTop: 12 }}>
+      <Space direction="vertical" size={16} style={{ width: '100%' }}>
         {root.map((c) => (
-          <div key={c.id}>
-            <div className={styles.comment}>
+          <div key={c.id} className={styles.comment}>
+            <div className={styles.commentRow}>
               <img className={styles.avatar} src={c.author.avatarUrl} alt={c.author.name} />
               <div className={styles.bubble}>
                 <div className={styles.meta}>
@@ -51,22 +53,20 @@ export function CommentsBlock({ items }: { items: CommentItem[] }) {
               </div>
             </div>
 
-            {(repliesByParent.get(c.id) ?? []).length > 0 && (
-              <div className={styles.replies}>
-                {(repliesByParent.get(c.id) ?? []).map((r) => (
-                  <div key={r.id} className={styles.comment}>
-                    <img className={styles.avatar} src={r.author.avatarUrl} alt={r.author.name} />
-                    <div className={styles.bubble}>
-                      <div className={styles.meta}>
-                        <span className={styles.author}>{r.author.name}</span>
-                        <span className={styles.date}>{new Date(r.createdAt).toLocaleString()}</span>
-                      </div>
-                      <p className={styles.text}>{r.text}</p>
+            <div className={styles.replies}>
+              {(repliesByParent.get(c.id) ?? []).map((r) => (
+                <div key={r.id} className={styles.commentRow}>
+                  <img className={styles.avatar} src={r.author.avatarUrl} alt={r.author.name} />
+                  <div className={styles.bubble}>
+                    <div className={styles.meta}>
+                      <span className={styles.author}>{r.author.name}</span>
+                      <span className={styles.date}>{new Date(r.createdAt).toLocaleString()}</span>
                     </div>
+                    <p className={styles.text}>{r.text}</p>
                   </div>
-                ))}
-              </div>
-            )}
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </Space>
