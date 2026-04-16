@@ -1,18 +1,15 @@
-import { Card, Image, List, Space, Tag, Typography } from 'antd';
+import { Space, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 
 import { mockFetch } from '../api/mockFetch';
+import { NewsMasonryCard } from '../components/news/NewsMasonryCard';
+import { NewsMasonryGrid } from '../components/news/NewsMasonryGrid';
 
 type NewsItem = {
   id: number;
   category: string;
   title: string;
   date: string;
-  author: string;
-  image: string;
-  description: string;
-  views: number;
-  likes: number;
 };
 
 type ApiResponse<T> = { items: T[] };
@@ -33,32 +30,9 @@ export function HomePage() {
         Главная
       </Typography.Title>
 
-      <List
-        dataSource={news}
-        renderItem={(item) => (
-          <List.Item key={item.id}>
-            <Card
-              title={
-                <Space direction="vertical" size={4} style={{ width: '100%' }}>
-                  <Space wrap>
-                    <Tag color="blue">{item.category}</Tag>
-                    <Typography.Text type="secondary">
-                      {item.date} · {item.author}
-                    </Typography.Text>
-                  </Space>
-                  <Typography.Text strong>{item.title}</Typography.Text>
-                </Space>
-              }
-              style={{ width: '100%' }}
-            >
-              <Space direction="vertical" size={12} style={{ width: '100%' }}>
-                <Image src={item.image} alt={item.title} width={360} />
-                <Typography.Paragraph style={{ marginBottom: 0 }}>{item.description}</Typography.Paragraph>
-                <Typography.Text type="secondary">Просмотры: {item.views} · Лайки: {item.likes}</Typography.Text>
-              </Space>
-            </Card>
-          </List.Item>
-        )}
+      <NewsMasonryGrid
+        items={news}
+        renderItem={(item) => <NewsMasonryCard category={item.category} title={item.title} publishedAt={item.date} />}
       />
     </Space>
   );

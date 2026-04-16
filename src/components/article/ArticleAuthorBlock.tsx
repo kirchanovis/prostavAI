@@ -1,5 +1,5 @@
-import { ClockIcon } from '../icons/ClockIcon';
 import styles from './ArticleAuthorBlock.module.scss';
+import { ClockIcon } from '../icons/ClockIcon';
 
 export function ArticleAuthorBlock({
   authorName,

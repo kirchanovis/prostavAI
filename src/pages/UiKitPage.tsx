@@ -17,9 +17,8 @@ import {
   IconTwitter,
   IconVk,
 } from '../icons';
-import { photosData } from '../mocks/photos';
-
 import { commentsMockData } from '../mocks/comments';
+import { photosData } from '../mocks/photos';
 
 export function UiKitPage() {
   return (
