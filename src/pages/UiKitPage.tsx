@@ -1,6 +1,19 @@
 import { Card, Divider, Space, Typography } from 'antd';
 
-import { IconChat, IconClock, IconEye, IconLike } from '../icons';
+import {
+  IconChat,
+  IconClock,
+  IconError,
+  IconEye,
+  IconFacebook,
+  IconHistory,
+  IconLike,
+  IconOk,
+  IconPlay,
+  IconSuccess,
+  IconTwitter,
+  IconVk,
+} from '../icons';
 
 export function UiKitPage() {
   return (
@@ -73,11 +86,55 @@ export function UiKitPage() {
       </Card>
 
       <Card title="Icons" style={{ width: '100%' }}>
-        <Space size={16} align="center">
-          <IconChat size={28} />
-          <IconClock size={28} />
-          <IconEye size={28} />
-          <IconLike size={28} />
+        <Space wrap size={16} align="center">
+          <Space direction="vertical" align="center">
+            <IconChat size={28} />
+            <Typography.Text type="secondary">chat</Typography.Text>
+          </Space>
+          <Space direction="vertical" align="center">
+            <IconClock size={28} />
+            <Typography.Text type="secondary">clock</Typography.Text>
+          </Space>
+          <Space direction="vertical" align="center">
+            <IconError size={28} />
+            <Typography.Text type="secondary">error</Typography.Text>
+          </Space>
+          <Space direction="vertical" align="center">
+            <IconEye size={28} />
+            <Typography.Text type="secondary">eye</Typography.Text>
+          </Space>
+          <Space direction="vertical" align="center">
+            <IconFacebook size={28} />
+            <Typography.Text type="secondary">facebook</Typography.Text>
+          </Space>
+          <Space direction="vertical" align="center">
+            <IconHistory size={28} />
+            <Typography.Text type="secondary">history</Typography.Text>
+          </Space>
+          <Space direction="vertical" align="center">
+            <IconLike size={28} />
+            <Typography.Text type="secondary">like</Typography.Text>
+          </Space>
+          <Space direction="vertical" align="center">
+            <IconOk size={28} />
+            <Typography.Text type="secondary">ok</Typography.Text>
+          </Space>
+          <Space direction="vertical" align="center">
+            <IconPlay size={28} />
+            <Typography.Text type="secondary">play</Typography.Text>
+          </Space>
+          <Space direction="vertical" align="center">
+            <IconSuccess size={28} />
+            <Typography.Text type="secondary">success</Typography.Text>
+          </Space>
+          <Space direction="vertical" align="center">
+            <IconTwitter size={28} />
+            <Typography.Text type="secondary">twitter</Typography.Text>
+          </Space>
+          <Space direction="vertical" align="center">
+            <IconVk size={28} />
+            <Typography.Text type="secondary">vk</Typography.Text>
+          </Space>
         </Space>
       </Card>
     </Space>
