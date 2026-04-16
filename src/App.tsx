@@ -5,6 +5,7 @@ import './App.css';
 import logo from './assets/brand/logo.jpg';
 import { TopNav } from './components/TopNav';
 import { HomePage } from './pages/HomePage';
+import { PhotoReportsPage } from './pages/PhotoReportsPage';
 import { StubPage } from './pages/StubPage';
 import { UiKitPage } from './pages/UiKitPage';
 import styles from './styles/menu.module.scss';
@@ -28,7 +29,7 @@ export default function App() {
           <Route path="/krai" element={<StubPage title="Ставропольский край" />} />
           <Route path="/skfo" element={<StubPage title="СКФО" />} />
           <Route path="/articles" element={<StubPage title="Статьи" />} />
-          <Route path="/photo-reports" element={<StubPage title="Фоторепортажи" />} />
+          <Route path="/photo-reports" element={<PhotoReportsPage />} />
           <Route path="/history" element={<StubPage title="История Ставрополья" />} />
           <Route path="/ui" element={<UiKitPage />} />
           <Route path="*" element={<StubPage title="404" />} />
