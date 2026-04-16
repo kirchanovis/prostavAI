@@ -27,11 +27,11 @@ export function ArticleAuthorBlock({
 
   return (
     <div className={styles.wrap}>
+      <img className={styles.avatar} src={authorAvatarUrl} alt={authorName} />
       <div className={styles.left}>
         <div className={styles.title}>{authorName}</div>
         <div className={styles.sub}>{publishedLabel}</div>
       </div>
-      <img className={styles.avatar} src={authorAvatarUrl} alt={authorName} />
     </div>
   );
 }
