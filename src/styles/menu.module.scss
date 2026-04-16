@@ -12,9 +12,15 @@
 
 .brand {
   padding-left: 24px;
-  white-space: nowrap;
-  margin: 0;
-  color: var(--color-text-title);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 313px;
+  height: 68px;
+  object-fit: contain;
 }
 
 .topMenu {
