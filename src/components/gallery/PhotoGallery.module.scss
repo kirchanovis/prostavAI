@@ -60,7 +60,7 @@
 .mainPhotoMeta {
   grid-area: meta;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 30% 70%;
   gap: 12px;
   align-items: start;
   color: var(--color-text-primary);
