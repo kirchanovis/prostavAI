@@ -1,21 +1,30 @@
 import { Card, Divider, Space, Typography } from 'antd';
 
-import { PhotoGallery } from '../components/gallery/PhotoGallery';
-import {
-  IconChat,
-  IconClock,
-  IconError,
-  IconEye,
-  IconFacebook,
-  IconHistory,
-  IconLike,
-  IconOk,
-  IconPlay,
-  IconSuccess,
-  IconTwitter,
-  IconVk,
-} from '../icons';
-import { photosData } from '../mocks/photos';
+import { CommentsBlock } from '../components/comments/CommentsBlock';
+
+import type { CommentItem } from '../mocks/comments';
+
+const demoComments: CommentItem[] = [
+  {
+    id: 'c1',
+    author: { name: 'Мария', avatarUrl: 'https://i.pravatar.cc/80?img=32' },
+    text: 'Классная новость! Хотелось бы больше подробностей.',
+    createdAt: '2022-04-05T10:15:00.000Z',
+  },
+  {
+    id: 'r1',
+    parentId: 'c1',
+    author: { name: 'Редакция', avatarUrl: 'https://i.pravatar.cc/80?img=5' },
+    text: 'Спасибо! Добавим детали, как только появится подтверждение.',
+    createdAt: '2022-04-05T11:05:00.000Z',
+  },
+  {
+    id: 'c2',
+    author: { name: 'Алексей', avatarUrl: 'https://i.pravatar.cc/80?img=12' },
+    text: 'А можно добавить карту и контакты организаторов?',
+    createdAt: '2022-04-05T10:40:00.000Z',
+  },
+];
 
 export function UiKitPage() {
   return (
@@ -24,95 +33,13 @@ export function UiKitPage() {
         UI Kit
       </Typography.Title>
       <Typography.Paragraph type="secondary" style={{ margin: 0 }}>
-        Страница для сборки и проверки переиспользуемых компонентов/токенов (типографика, цвета, иконки).
+        Страница для сборки и проверки переиспользуемых компонентов/токенов.
       </Typography.Paragraph>
 
       <Divider style={{ margin: '12px 0' }} />
 
-      <Card title="Typography (tokens)" style={{ width: '100%' }}>
-        <Space direction="vertical" size={8} style={{ width: '100%' }}>
-          <div style={{ fontSize: 'var(--typo-h1-size)', fontWeight: 'var(--typo-h1-weight)' }}>H1 — 42</div>
-          <div style={{ fontSize: 'var(--typo-h2-size)', fontWeight: 'var(--typo-h2-weight)' }}>H2 — 24</div>
-          <div style={{ fontSize: 'var(--typo-h3-size)', fontWeight: 'var(--typo-h3-weight)' }}>H3 — 21</div>
-          <div style={{ fontSize: 'var(--typo-body-size)', fontWeight: 'var(--typo-body-weight)' }}>
-            Body — 21: обычный текст
-          </div>
-          <div style={{ fontSize: 'var(--typo-h4-size)', fontWeight: 'var(--typo-h4-weight)' }}>H4 — 16</div>
-          <div
-            style={{
-              fontSize: 'var(--typo-comment-size)',
-              fontWeight: 'var(--typo-comment-weight)',
-              fontStyle: 'italic',
-            }}
-          >
-            Comment — 21 (semibold italic)
-          </div>
-          <div style={{ fontSize: 'var(--typo-news-caption-size)', fontWeight: 'var(--typo-news-caption-weight)' }}>
-            News caption — 16
-          </div>
-          <div style={{ fontSize: 'var(--typo-home-caption-size)', fontWeight: 'var(--typo-home-caption-weight)' }}>
-            Home caption — 12
-          </div>
-          <div style={{ fontSize: 'var(--typo-caption-size)', fontWeight: 'var(--typo-caption-weight)' }}>
-            Caption — 12
-          </div>
-        </Space>
-      </Card>
-
-      <Card title="Colors (tokens)" style={{ width: '100%' }}>
-        <Space wrap size={12}>
-          {[
-            ['primary', 'var(--color-primary)'],
-            ['bg', 'var(--color-bg)'],
-            ['bg-light', 'var(--color-bg-light)'],
-            ['text', 'var(--color-text)'],
-            ['title', 'var(--color-text-title)'],
-            ['caption', 'var(--color-text-caption)'],
-            ['comment', 'var(--color-text-comment)'],
-          ].map(([name, value]) => (
-            <div key={name} style={{ width: 160 }}>
-              <div
-                style={{
-                  height: 48,
-                  borderRadius: 10,
-                  background: value,
-                  border: '1px solid rgba(0,0,0,0.06)',
-                }}
-              />
-              <Typography.Text>{name}</Typography.Text>
-              <br />
-              <Typography.Text type="secondary">{value}</Typography.Text>
-            </div>
-          ))}
-        </Space>
-      </Card>
-
-      <Card title="Icons" style={{ width: '100%' }}>
-        <Space wrap size={16} align="center">
-          {[
-            { name: 'chat', icon: <IconChat size={28} /> },
-            { name: 'clock', icon: <IconClock size={28} /> },
-            { name: 'error', icon: <IconError size={28} /> },
-            { name: 'eye', icon: <IconEye size={28} /> },
-            { name: 'facebook', icon: <IconFacebook size={28} /> },
-            { name: 'history', icon: <IconHistory size={28} /> },
-            { name: 'like', icon: <IconLike size={28} /> },
-            { name: 'ok', icon: <IconOk size={28} /> },
-            { name: 'play', icon: <IconPlay size={28} /> },
-            { name: 'success', icon: <IconSuccess size={28} /> },
-            { name: 'twitter', icon: <IconTwitter size={28} /> },
-            { name: 'vk', icon: <IconVk size={28} /> },
-          ].map(({ name, icon }) => (
-            <Space key={name} direction="vertical" align="center">
-              {icon}
-              <Typography.Text type="secondary">{name}</Typography.Text>
-            </Space>
-          ))}
-        </Space>
-      </Card>
-
-      <Card title="PhotoGallery" style={{ width: '100%' }}>
-        <PhotoGallery items={photosData} />
+      <Card title="CommentsBlock" style={{ width: '100%' }}>
+        <CommentsBlock items={demoComments} />
       </Card>
     </Space>
   );
