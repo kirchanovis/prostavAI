@@ -4,6 +4,7 @@ import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
 import { PhotoGallery } from '../components/gallery/PhotoGallery';
 import { NewsCard } from '../components/news/NewsCard';
+import { NewsMasonryGrid } from '../components/news/NewsMasonryGrid';
 import {
   IconChat,
   IconClock,
@@ -20,6 +21,52 @@ import {
 } from '../icons';
 import { commentsMockData } from '../mocks/comments';
 import { photosData } from '../mocks/photos';
+
+type DemoNewsItem = {
+  id: string;
+  category: string;
+  title: string;
+  publishedAt: string;
+};
+
+const demoNews: DemoNewsItem[] = [
+  {
+    id: 'n1',
+    category: 'События',
+    title: 'Открыта регистрация на весенний митап',
+    publishedAt: '2022-04-05T10:15:00.000Z',
+  },
+  {
+    id: 'n2',
+    category: 'Город',
+    title: 'В центре перекроют движение на выходных',
+    publishedAt: '2022-04-06T08:30:00.000Z',
+  },
+  {
+    id: 'n3',
+    category: 'Технологии',
+    title: 'Обновили дизайн-систему: новые токены и иконки',
+    publishedAt: '2022-04-06T13:05:00.000Z',
+  },
+  {
+    id: 'n4',
+    category: 'Анонсы',
+    title: 'Запускаем новую рубрику с подборками недели',
+    publishedAt: '2022-04-07T18:40:00.000Z',
+  },
+  {
+    id: 'n5',
+    category: 'Спорт',
+    title: 'Городской забег: маршрут и расписание',
+    publishedAt: '2022-04-08T07:50:00.000Z',
+  },
+  {
+    id: 'n6',
+    category: 'Культура',
+    title: 'Фестиваль уличной еды возвращается в мае',
+    publishedAt: '2022-04-08T16:20:00.000Z',
+  },
+];
 
 export function UiKitPage() {
   return (
@@ -131,11 +178,10 @@ export function UiKitPage() {
         />
       </Card>
 
-      <Card title="NewsCard" style={{ width: '100%' }}>
-        <NewsCard
-          category="События"
-          title="Открыта регистрация на весенний митап"
-          publishedAt="2026-04-17T10:15:00.000Z"
+      <Card title="News (masonry)" style={{ width: '100%' }}>
+        <NewsMasonryGrid
+          items={demoNews}
+          renderItem={(item) => <NewsCard category={item.category} title={item.title} publishedAt={item.publishedAt} />}
         />
       </Card>
     </Space>
