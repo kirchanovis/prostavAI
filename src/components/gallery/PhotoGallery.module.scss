@@ -1,5 +1,8 @@
 .gallery {
   width: 100%;
+  background: var(--color-gallery-bg);
+  border-radius: 16px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -9,14 +12,6 @@
   padding: 12px 14px;
   color: var(--color-text-caption);
 }
-
-.main-photo,
-.mainPhoto {
-  background: var(--color-gallery-bg);
-  border-radius: 16px;
-  padding: 16px;
-}
-
 .mainPhoto {
   display: grid;
   grid-template-columns: 1fr;
