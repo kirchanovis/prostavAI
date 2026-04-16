@@ -6,7 +6,7 @@ import styles from './PhotoGallery.module.scss';
 
 import type { PhotoItem } from '../../mocks/photos';
 
-export function PhotoGallery({ items }: { items: PhotoItem[] }) {
+export function PhotoGallery({ items }: { items: ReadonlyArray<PhotoItem> }) {
   const safeItems = useMemo(() => items ?? [], [items]);
   const [activeId, setActiveId] = useState<number>(() => safeItems[0]?.id ?? 0);
 

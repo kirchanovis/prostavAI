@@ -109,19 +109,19 @@ export function UiKitPage() {
       <Card title="Icons" style={{ width: '100%' }}>
         <Space wrap size={16} align="center">
           {[
-            ['chat', <IconChat size={28} key="chat" />],
-            ['clock', <IconClock size={28} key="clock" />],
-            ['error', <IconError size={28} key="error" />],
-            ['eye', <IconEye size={28} key="eye" />],
-            ['facebook', <IconFacebook size={28} key="facebook" />],
-            ['history', <IconHistory size={28} key="history" />],
-            ['like', <IconLike size={28} key="like" />],
-            ['ok', <IconOk size={28} key="ok" />],
-            ['play', <IconPlay size={28} key="play" />],
-            ['success', <IconSuccess size={28} key="success" />],
-            ['twitter', <IconTwitter size={28} key="twitter" />],
-            ['vk', <IconVk size={28} key="vk" />],
-          ].map(([name, icon]) => (
+            { name: 'chat', icon: <IconChat size={28} /> },
+            { name: 'clock', icon: <IconClock size={28} /> },
+            { name: 'error', icon: <IconError size={28} /> },
+            { name: 'eye', icon: <IconEye size={28} /> },
+            { name: 'facebook', icon: <IconFacebook size={28} /> },
+            { name: 'history', icon: <IconHistory size={28} /> },
+            { name: 'like', icon: <IconLike size={28} /> },
+            { name: 'ok', icon: <IconOk size={28} /> },
+            { name: 'play', icon: <IconPlay size={28} /> },
+            { name: 'success', icon: <IconSuccess size={28} /> },
+            { name: 'twitter', icon: <IconTwitter size={28} /> },
+            { name: 'vk', icon: <IconVk size={28} /> },
+          ].map(({ name, icon }) => (
             <Space key={name} direction="vertical" align="center">
               {icon}
               <Typography.Text type="secondary">{name}</Typography.Text>
