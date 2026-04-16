@@ -16,10 +16,26 @@
   min-width: 0;
 }
 
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .title {
   color: var(--color-text-primary);
   font-size: 16px;
   font-weight: 500;
+}
+
+.subscribeBtn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .sub {
