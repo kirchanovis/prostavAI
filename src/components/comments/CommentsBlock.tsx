@@ -1,4 +1,3 @@
-import { Space, Typography } from 'antd';
 import { useMemo } from 'react';
 
 import styles from './CommentsBlock.module.scss';
@@ -21,13 +20,9 @@ export function CommentsBlock({ items }: { items: CommentItem[] }) {
 
   return (
     <div className={styles.comments}>
-      <div className={styles.title}>
-        <Typography.Title level={4} style={{ margin: 0 }}>
-          Комментарии
-        </Typography.Title>
-      </div>
+      <div className={styles.title}>Комментарии</div>
 
-      <Space direction="vertical" size={16} style={{ width: '100%' }}>
+      <div className={styles.list}>
         {root.map((c) => (
           <div key={c.id} className={styles.comment}>
             <div className={styles.commentRow}>
@@ -69,7 +64,7 @@ export function CommentsBlock({ items }: { items: CommentItem[] }) {
             </div>
           </div>
         ))}
-      </Space>
+      </div>
     </div>
   );
 }
