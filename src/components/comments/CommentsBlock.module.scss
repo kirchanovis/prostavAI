@@ -9,7 +9,7 @@
 .commentRow {
   display: flex;
   gap: 12px;
-  align-items: flex-start;
+  align-items: baseline;
 }
 
 .avatar {
@@ -21,7 +21,6 @@
 
 .bubble {
   flex: 1;
-  background: var(--color-bg-light);
   border-radius: 14px;
   padding: 12px 14px;
 }
@@ -85,5 +84,5 @@
 
 :global(.comments) {
   background: var(--color-bg);
-  margin: 20px;
+  padding: 20px;
 }
