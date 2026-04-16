@@ -5,9 +5,12 @@
   // backgrounds
   --color-bg: #f6f1ee; // bg / bgColor
   --color-bg-light: #ffffff; // lightBg
+  --color-surface: #e7ded9;
+  --color-gallery-bg: #d0c2ba; // gallery overall background // extra surface (e.g. gallery main photo background)
 
   // text
   --color-text: #5e514f; // mainTextColor / mainColor
+  --color-text-primary: #5e514f; // explicit primary text (DS)
   --color-text-title: #826b60; // titleTextColor
   --color-text-caption: #a79895; // captionTextColor
   --color-text-comment: #9e8170; // commentTextColor
@@ -18,6 +21,9 @@
   --ds-bgColor: #f6f1ee;
   --ds-activeColor: #c26831;
   --ds-lightBg: #ffffff;
+  --ds-surface: #e7ded9;
+  --ds-galleryBg: #d0c2ba;
+  --ds-scrollbar: #c4b9b2;
   --ds-mainTextColor: #5e514f;
   --ds-captionTextColor: #a79895;
   --ds-activeTextColor: #c26831;
