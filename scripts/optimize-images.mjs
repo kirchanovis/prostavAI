@@ -56,22 +56,16 @@ async function main() {
     if (after < before) {
       await fs.writeFile(file, out);
       stats.optimized += 1;
-      // eslint-disable-next-line no-console
       console.log(`✓ ${path.relative(ROOT, file)}  ${fmt(before)} -> ${fmt(after)}`);
     } else {
-      // eslint-disable-next-line no-console
       console.log(`· ${path.relative(ROOT, file)}  ${fmt(before)} (no change)`);
     }
   }
-
-  // eslint-disable-next-line no-console
-  console.log(`\nDone. Files: ${stats.files}, optimized: ${stats.optimized}`);
-  // eslint-disable-next-line no-console
-  console.log(`Total: ${fmt(stats.before)} -> ${fmt(stats.after)} (quality=${quality})`);
+      console.log(`\nDone. Files: ${stats.files}, optimized: ${stats.optimized}`);
+      console.log(`Total: ${fmt(stats.before)} -> ${fmt(stats.after)} (quality=${quality})`);
 }
 
 main().catch((err) => {
-  // eslint-disable-next-line no-console
-  console.error(err);
+      console.error(err);
   process.exitCode = 1;
 });
