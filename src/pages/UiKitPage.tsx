@@ -4,6 +4,7 @@ import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
 import { PhotoGallery } from '../components/gallery/PhotoGallery';
 import { NewsCard } from '../components/news/NewsCard';
+import { NewsImageCard } from '../components/news/NewsImageCard';
 import { TopNewsBlock } from '../components/news/TopNewsBlock';
 import {
   IconChat,
@@ -150,6 +151,15 @@ export function UiKitPage() {
 
       <Card title="Top news block" style={{ width: '100%' }}>
         <TopNewsBlock titles={demoTopNewsTitles} />
+      </Card>
+
+      <Card title="NewsImageCard" style={{ width: '100%' }}>
+        <NewsImageCard
+          category="События"
+          title="Вечерняя программа: что посмотреть в городе"
+          publishedAt="2026-04-17T10:15:00.000Z"
+          imageUrl="https://images.unsplash.com/photo-1520975958221-9a6f96a4632d?auto=format&fit=crop&w=1200&q=80"
+        />
       </Card>
     </Space>
   );
