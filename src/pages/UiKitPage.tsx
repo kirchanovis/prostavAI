@@ -135,7 +135,7 @@ export function UiKitPage() {
         <NewsCard
           category="События"
           title="Открыта регистрация на весенний митап"
-          publishedAt="2022-04-05T10:15:00.000Z"
+          publishedAt="2026-04-17T10:15:00.000Z"
         />
       </Card>
     </Space>
