@@ -33,10 +33,10 @@
   justify-self: center;
   align-self: center;
   text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.25;
-  color: var(--color-text-primary);
+  font-size: var(--typo-h4-size);
+  font-weight: var(--typo-h4-weight);
+  line-height: 1.35;
+  color: var(--color-text-muted);
 }
 
 .meta {
