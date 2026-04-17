@@ -1,4 +1,6 @@
 .card {
+  width: 300px;
+  height: 420px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 14px;
@@ -8,12 +10,21 @@
 .grid {
   display: grid;
   grid-template-rows: auto 1fr;
-  min-height: 280px; /* ~2x of NewsMasonryCard */
+  height: 100%;
   gap: 12px;
 }
 
 .category {
   justify-self: start;
+  color: #826b60;
+  font-size: 12px;
+  line-height: 16px;
+  background: #f6f1ee;
+  border-radius: 2px;
+  padding: 2px 8px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0px 1px 3px rgba(71, 60, 56, 0.2);
 }
 
 .listWrap {
