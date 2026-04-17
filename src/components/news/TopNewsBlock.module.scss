@@ -35,15 +35,17 @@
 
 .list {
   margin: 0;
-  padding-left: 18px;
+  padding: 0;
   width: 100%;
   max-width: 520px;
+  list-style: none;
 }
 
 .item {
-  font-size: 16px;
+  font-size: var(--typo-h4-size);
+  font-weight: var(--typo-h4-weight);
   line-height: 1.35;
-  color: var(--color-text-primary);
+  color: var(--color-text-muted);
 }
 
 .item + .item {
