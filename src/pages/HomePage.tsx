@@ -2,7 +2,7 @@ import { Space, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 
 import { mockFetch } from '../api/mockFetch';
-import { NewsMasonryCard } from '../components/news/NewsMasonryCard';
+import { NewsCard } from '../components/news/NewsCard';
 import { NewsMasonryGrid } from '../components/news/NewsMasonryGrid';
 
 type NewsItem = {
@@ -32,7 +32,7 @@ export function HomePage() {
 
       <NewsMasonryGrid
         items={news}
-        renderItem={(item) => <NewsMasonryCard category={item.category} title={item.title} publishedAt={item.date} />}
+        renderItem={(item) => <NewsCard category={item.category} title={item.title} publishedAt={item.date} />}
       />
     </Space>
   );
