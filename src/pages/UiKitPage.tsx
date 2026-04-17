@@ -6,6 +6,7 @@ import { PhotoGallery } from '../components/gallery/PhotoGallery';
 import { AdImageCard } from '../components/news/AdImageCard';
 import { NewsCard } from '../components/news/NewsCard';
 import { NewsImageCard } from '../components/news/NewsImageCard';
+import { NewsImageWideCard } from '../components/news/NewsImageWideCard';
 import { TopNewsBlock } from '../components/news/TopNewsBlock';
 import {
   IconChat,
@@ -168,6 +169,15 @@ export function UiKitPage() {
           title="Скидки на выходные — успей забронировать"
           publishedAt="2026-04-17T10:15:00.000Z"
           imageUrl="/src/assets/photos/IMG_1817.png"
+        />
+      </Card>
+
+      <Card title="NewsImageWideCard" style={{ width: '100%' }}>
+        <NewsImageWideCard
+          category="События"
+          title="Открыта регистрация на весенний митап"
+          publishedAt="2026-04-17T10:15:00.000Z"
+          imageUrl="/src/assets/photos/AqI6FFiBDNE.jpg"
         />
       </Card>
     </Space>
