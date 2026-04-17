@@ -7,6 +7,7 @@ import { AdImageCard } from '../components/news/AdImageCard';
 import { NewsCard } from '../components/news/NewsCard';
 import { NewsImageCard } from '../components/news/NewsImageCard';
 import { NewsImageWideCard } from '../components/news/NewsImageWideCard';
+import { NewsVideoCard } from '../components/news/NewsVideoCard';
 import { TopNewsBlock } from '../components/news/TopNewsBlock';
 import {
   IconChat,
@@ -178,6 +179,15 @@ export function UiKitPage() {
           title="Открыта регистрация на весенний митап"
           publishedAt="2026-04-17T10:15:00.000Z"
           imageUrl="/src/assets/photos/AqI6FFiBDNE.jpg"
+        />
+      </Card>
+
+      <Card title="NewsVideoCard (620)" style={{ width: '100%' }}>
+        <NewsVideoCard
+          category="События"
+          title="Гид по выходным: что успеть за два дня"
+          publishedAt="2026-04-17T10:15:00.000Z"
+          imageUrl="/src/assets/photos/IMG_2608.png"
         />
       </Card>
     </Space>
