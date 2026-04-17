@@ -1,5 +1,3 @@
-import { Tag } from 'antd';
-
 import styles from './NewsCard.module.scss';
 import { ClockIcon } from '../icons/ClockIcon';
 
@@ -29,9 +27,7 @@ export function NewsCard({
   return (
     <div className={styles.card}>
       <div className={styles.grid}>
-        <div className={styles.category}>
-          <Tag color="blue">{category}</Tag>
-        </div>
+        <div className={styles.category}>{category}</div>
 
         <div className={styles.title}>{title}</div>
 
