@@ -19,6 +19,12 @@
   justify-self: start;
 }
 
+.category :global(.ant-tag) {
+  color: #826b60;
+  font-size: 12px;
+  line-height: 16px;
+}
+
 .title {
   justify-self: center;
   align-self: center;
