@@ -158,7 +158,7 @@ export function UiKitPage() {
           category="События"
           title="Вечерняя программа: что посмотреть в городе"
           publishedAt="2026-04-17T10:15:00.000Z"
-          imageUrl="https://images.unsplash.com/photo-1520975958221-9a6f96a4632d?auto=format&fit=crop&w=1200&q=80"
+          imageUrl="/src/assets/photos/den-goroda-stavropol-5.jpg"
         />
       </Card>
     </Space>
