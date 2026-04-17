@@ -14,7 +14,12 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.55) 55%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(130, 107, 96, 0.35) 0%,
+    rgba(130, 107, 96, 0.55) 55%,
+    rgba(130, 107, 96, 0.7) 100%
+  );
 }
 
 .grid {
