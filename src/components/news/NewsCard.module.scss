@@ -2,8 +2,9 @@
   width: 300px;
   height: 200px;
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 14px;
+  border: 1px solid var(--color-gallery-bg);
+  border-radius: 4px;
+  box-shadow: 0px 0px 7px rgba(71, 60, 56, 0.2);
   padding: 14px;
 }
 
@@ -32,10 +33,10 @@
   justify-self: center;
   align-self: center;
   text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.25;
-  color: var(--color-text-primary);
+  font-size: var(--typo-h4-size);
+  font-weight: var(--typo-h4-weight);
+  line-height: 1.35;
+  color: var(--color-text-muted);
 }
 
 .meta {
