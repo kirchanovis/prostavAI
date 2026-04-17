@@ -1,5 +1,4 @@
 import styles from './NewsCard.module.scss';
-import { ClockIcon } from '../icons/ClockIcon';
 
 export function NewsCard({
   category,
@@ -12,17 +11,19 @@ export function NewsCard({
 }) {
   const date = typeof publishedAt === 'string' ? new Date(publishedAt) : publishedAt;
 
-  const formattedDate = new Intl.DateTimeFormat('ru-RU', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric',
-  }).format(date);
+  const now = new Date();
+  const diffMs = now.getTime() - date.getTime();
+  const diffMinutes = Math.max(0, Math.floor(diffMs / 60000));
+  const diffHours = Math.floor(diffMinutes / 60);
+  const diffDays = Math.floor(diffHours / 24);
 
-  const formattedTime = new Intl.DateTimeFormat('ru-RU', {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-  }).format(date);
+  const formatRelative = () => {
+    if (diffMinutes < 60) return `${diffMinutes} минут назад`;
+    if (diffHours < 24) return `${diffHours} часов назад`;
+    return `${diffDays} дней назад`;
+  };
+
+  const relativeLabel = formatRelative();
 
   return (
     <div className={styles.card}>
@@ -31,12 +32,7 @@ export function NewsCard({
 
         <div className={styles.title}>{title}</div>
 
-        <div className={styles.meta}>
-          <ClockIcon />
-          <span>
-            {formattedTime} · {formattedDate}
-          </span>
-        </div>
+        <div className={styles.meta}>{relativeLabel}</div>
       </div>
     </div>
   );
