@@ -3,6 +3,7 @@ import { Card, Divider, Space, Typography } from 'antd';
 import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
 import { PhotoGallery } from '../components/gallery/PhotoGallery';
+import { AdImageCard } from '../components/news/AdImageCard';
 import { NewsCard } from '../components/news/NewsCard';
 import { NewsImageCard } from '../components/news/NewsImageCard';
 import { TopNewsBlock } from '../components/news/TopNewsBlock';
@@ -159,6 +160,14 @@ export function UiKitPage() {
           title="Вечерняя программа: что посмотреть в городе"
           publishedAt="2026-04-17T10:15:00.000Z"
           imageUrl="/src/assets/photos/den-goroda-stavropol-5.jpg"
+        />
+      </Card>
+
+      <Card title="AdImageCard" style={{ width: '100%' }}>
+        <AdImageCard
+          title="Скидки на выходные — успей забронировать"
+          publishedAt="2026-04-17T10:15:00.000Z"
+          imageUrl="/src/assets/photos/IMG_1817.png"
         />
       </Card>
     </Space>
