@@ -1,14 +1,10 @@
-import { Tag } from 'antd';
-
 import styles from './TopNewsBlock.module.scss';
 
 export function TopNewsBlock({ titles }: { titles: string[] }) {
   return (
     <div className={styles.card}>
       <div className={styles.grid}>
-        <div className={styles.category}>
-          <Tag color="blue">Главные новости</Tag>
-        </div>
+        <div className={styles.category}>Главные новости</div>
 
         <div className={styles.listWrap}>
           <ul className={styles.list}>
