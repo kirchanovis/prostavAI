@@ -46,19 +46,16 @@ export function NewsImageWideCard({
   };
 
   return (
-    <div>
-      <div className={styles.card} style={{ backgroundImage: `url(${imageUrl})` }}>
-        <div className={styles.overlay} />
-        <div className={styles.grid}>
-          <div className={styles.category}>{category}</div>
-          <div className={styles.title}>{title}</div>
-          <div className={styles.meta}>{formatRelative()}</div>
-        </div>
+    <div className={styles.card} style={{ backgroundImage: `url(${imageUrl})` }}>
+      <div className={styles.overlay} />
+      <div className={styles.grid}>
+        <div className={styles.category}>{category}</div>
+        <div className={styles.title}>{title}</div>
+        <button type="button" className={styles.timeline} onClick={onTimelineClick}>
+          Хронология событий
+        </button>
+        <div className={styles.meta}>{formatRelative()}</div>
       </div>
-
-      <button type="button" className={styles.button} onClick={onTimelineClick}>
-        Хронология событий
-      </button>
     </div>
   );
 }
