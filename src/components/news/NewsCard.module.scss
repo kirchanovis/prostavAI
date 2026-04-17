@@ -17,12 +17,14 @@
 
 .category {
   justify-self: start;
-}
-
-.category {
   color: #826b60;
   font-size: 12px;
   line-height: 16px;
+  background: #f6f1ee;
+  border-radius: 999px;
+  padding: 2px 8px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .title {
