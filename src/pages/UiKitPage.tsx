@@ -3,6 +3,7 @@ import { Card, Divider, Space, Typography } from 'antd';
 import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
 import { PhotoGallery } from '../components/gallery/PhotoGallery';
+import { NewsCard } from '../components/news/NewsCard';
 import {
   IconChat,
   IconClock,
@@ -127,6 +128,14 @@ export function UiKitPage() {
           authorName="Иван Иванов"
           authorAvatarUrl="https://i.pravatar.cc/80?img=8"
           publishedAt="2022-04-05T09:30:00.000Z"
+        />
+      </Card>
+
+      <Card title="NewsCard" style={{ width: '100%' }}>
+        <NewsCard
+          category="События"
+          title="Открыта регистрация на весенний митап"
+          publishedAt="2022-04-05T10:15:00.000Z"
         />
       </Card>
     </Space>
