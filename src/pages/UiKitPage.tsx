@@ -186,6 +186,7 @@ export function UiKitPage() {
         <NewsVideoCard
           category="События"
           title="Гид по выходным: что успеть за два дня"
+          subtitle="Короткое видео с маршрутами и советами"
           publishedAt="2026-04-17T10:15:00.000Z"
           imageUrl="/src/assets/photos/IMG_2608.png"
         />
