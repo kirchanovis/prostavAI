@@ -59,8 +59,10 @@ export function NewsVideoCard({
 
       <div className={styles.right}>
         <div className={styles.category}>{category}</div>
-        <div className={styles.title}>{title}</div>
-        <div className={styles.subtitle}>{subtitle}</div>
+        <div className={styles.titleBlock}>
+          <div className={styles.title}>{title}</div>
+          <div className={styles.subtitle}>{subtitle}</div>
+        </div>
         <div className={styles.meta}>{formatRelative()}</div>
       </div>
     </div>
