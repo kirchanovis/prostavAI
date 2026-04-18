@@ -50,10 +50,12 @@ export function NewsImageWideCard({
       <div className={styles.overlay} />
       <div className={styles.grid}>
         <div className={styles.category}>{category}</div>
-        <div className={styles.title}>{title}</div>
-        <button type="button" className={styles.timeline} onClick={onTimelineClick}>
-          Хронология событий
-        </button>
+        <div className={styles.titleBlock}>
+          <div className={styles.title}>{title}</div>
+          <button type="button" className={styles.timeline} onClick={onTimelineClick}>
+            Хронология событий
+          </button>
+        </div>
         <div className={styles.meta}>{formatRelative()}</div>
       </div>
     </div>
