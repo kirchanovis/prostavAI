@@ -50,7 +50,7 @@ export function NewsVideoCard({
         <div className={styles.leftOverlay} />
         <div className={styles.play}>
           <div className={styles.playBtn} aria-hidden="true">
-            <IconPlay size={28} />
+            <IconPlay size={28} className={styles.playIcon} />
           </div>
         </div>
       </div>
