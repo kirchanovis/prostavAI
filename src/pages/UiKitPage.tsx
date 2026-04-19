@@ -9,6 +9,7 @@ import { NewsImageCard } from '../components/news/NewsImageCard';
 import { NewsImageWideCard } from '../components/news/NewsImageWideCard';
 import { NewsVideoCard } from '../components/news/NewsVideoCard';
 import { TopNewsBlock } from '../components/news/TopNewsBlock';
+import { TopNav } from '../components/TopNav';
 import {
   IconChat,
   IconClock,
@@ -190,6 +191,10 @@ export function UiKitPage() {
           publishedAt="2026-04-17T10:15:00.000Z"
           imageUrl="/src/assets/photos/IMG_2608.png"
         />
+      </Card>
+
+      <Card title="TopNav" style={{ width: '100%' }}>
+        <TopNav />
       </Card>
     </Space>
   );
