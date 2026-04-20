@@ -1,4 +1,5 @@
-import { Card, Divider, Space, Typography } from 'antd';
+import { Card, Checkbox, Divider, Space, Typography } from 'antd';
+import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
@@ -41,6 +42,7 @@ const demoTopNewsTitles: string[] = [
 
 export function UiKitPage() {
   const location = useLocation();
+  const [showOnSceneMedia, setShowOnSceneMedia] = useState(false);
   useNavigate();
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
@@ -208,7 +210,21 @@ export function UiKitPage() {
       </Card>
 
       <Card title="OnSceneReportCard" style={{ width: '100%' }}>
-        <OnSceneReportCard timeLabel="1 час назад" title="Репортаж с места событий: что известно к этому часу" />
+        <Space direction="vertical" size={12} style={{ width: '100%' }}>
+          <Checkbox checked={showOnSceneMedia} onChange={(e) => setShowOnSceneMedia(e.target.checked)}>
+            Показать фото
+          </Checkbox>
+
+          <OnSceneReportCard
+            timeLabel="1 час назад"
+            title="Репортаж с места событий: что известно к этому часу"
+            media={
+              showOnSceneMedia
+                ? { type: 'image', src: '/src/assets/photos/IMG_2244.png', alt: 'On-scene report' }
+                : undefined
+            }
+          />
+        </Space>
       </Card>
     </Space>
   );
