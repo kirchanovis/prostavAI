@@ -1,9 +1,10 @@
 import { Layout } from 'antd';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import './App.css';
 import logo from './assets/brand/logo.jpg';
 import { TopNav } from './components/TopNav';
+import { topNavItems } from './components/topNavItems';
 import { ArticlesPage } from './pages/ArticlesPage';
 import { HomePage } from './pages/HomePage';
 import { StubPage } from './pages/StubPage';
@@ -13,13 +14,15 @@ import styles from './styles/menu.module.scss';
 const { Header, Content, Footer } = Layout;
 
 export default function App() {
+  const navigate = useNavigate();
+
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Header className={styles.topHeader}>
         <div className={styles.brand}>
           <img src={logo} className={styles.logo} alt="Логотип" />
         </div>
-        <TopNav className={styles.topMenu} />
+        <TopNav className={styles.topMenu} items={topNavItems} onSelect={(key) => navigate(key)} />
       </Header>
 
       <Content style={{ padding: 24, maxWidth: 1100, width: '100%', margin: '0 auto' }}>
