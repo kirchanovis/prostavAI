@@ -16,6 +16,9 @@
   color: var(--color-text-muted);
   font-size: 14px;
   line-height: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .linkActive {

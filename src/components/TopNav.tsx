@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 
+import { IconHistory } from '../icons';
 import styles from './TopNav.module.scss';
 
 export type TopNavItem = { key: string; label: string };
@@ -32,6 +33,7 @@ export function TopNav({
             className={[styles.link, isActive ? styles.linkActive : ''].filter(Boolean).join(' ')}
             onClick={() => onSelect(i.key)}
           >
+            {i.key === '/history' && <IconHistory size={18} />}
             {i.label}
           </button>
         );
