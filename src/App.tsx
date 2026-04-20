@@ -1,5 +1,5 @@
 import { Layout } from 'antd';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
 import './App.css';
 import logo from './assets/brand/logo.jpg';
@@ -15,6 +15,7 @@ const { Header, Content, Footer } = Layout;
 
 export default function App() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -22,7 +23,12 @@ export default function App() {
         <div className={styles.brand}>
           <img src={logo} className={styles.logo} alt="Логотип" />
         </div>
-        <TopNav className={styles.topMenu} items={topNavItems} onSelect={(key) => navigate(key)} />
+        <TopNav
+          className={styles.topMenu}
+          items={topNavItems}
+          onSelect={(key) => navigate(key)}
+          locationPathname={location.pathname}
+        />
       </Header>
 
       <Content style={{ padding: 24, maxWidth: 1100, width: '100%', margin: '0 auto' }}>

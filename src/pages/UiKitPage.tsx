@@ -1,5 +1,5 @@
 import { Card, Divider, Space, Typography } from 'antd';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
@@ -38,6 +38,7 @@ const demoTopNewsTitles: string[] = [
 ];
 
 export function UiKitPage() {
+  const location = useLocation();
   useNavigate();
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
@@ -197,7 +198,7 @@ export function UiKitPage() {
       </Card>
 
       <Card title="TopNav" style={{ width: '100%' }}>
-        <TopNav items={topNavItems} onSelect={() => {}} />
+        <TopNav items={topNavItems} onSelect={() => {}} locationPathname={location.pathname} />
       </Card>
     </Space>
   );

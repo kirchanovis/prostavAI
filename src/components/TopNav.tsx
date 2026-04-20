@@ -1,6 +1,5 @@
-import { useLocation } from 'react-router-dom';
-
 import { IconHistory } from '../icons';
+import { getActiveNavKey } from './getActiveNavKey';
 import styles from './TopNav.module.scss';
 
 export type TopNavItem = { key: string; label: string };
@@ -9,18 +8,14 @@ export function TopNav({
   className,
   items,
   onSelect,
+  locationPathname,
 }: {
   className?: string;
   items: readonly TopNavItem[];
   onSelect: (key: string) => void;
+  locationPathname: string;
 }) {
-  const location = useLocation();
-
-  const activeKey =
-    items
-      .map((i) => i.key)
-      .sort((a, b) => b.length - a.length)
-      .find((k) => (k === '/' ? location.pathname === '/' : location.pathname.startsWith(k))) ?? '/';
+  const activeKey = getActiveNavKey(items, locationPathname);
 
   return (
     <nav className={[styles.nav, className].filter(Boolean).join(' ')}>
