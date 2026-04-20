@@ -10,6 +10,7 @@ import { NewsImageCard } from '../components/news/NewsImageCard';
 import { NewsImageWideCard } from '../components/news/NewsImageWideCard';
 import { NewsVideoCard } from '../components/news/NewsVideoCard';
 import { TopNewsBlock } from '../components/news/TopNewsBlock';
+import { PhotoBlock } from '../components/photo/PhotoBlock';
 import { TopNav } from '../components/TopNav';
 import { topNavItems } from '../components/topNavItems';
 import {
@@ -199,6 +200,10 @@ export function UiKitPage() {
 
       <Card title="TopNav" style={{ width: '100%' }}>
         <TopNav items={topNavItems} onSelect={() => {}} locationPathname={location.pathname} />
+      </Card>
+
+      <Card title="PhotoBlock" style={{ width: '100%' }}>
+        <PhotoBlock src="/src/assets/photos/IMG_2530.png" alt="Demo photo" />
       </Card>
     </Space>
   );
