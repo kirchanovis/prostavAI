@@ -37,7 +37,7 @@ export function TopNav({
           >
             {i.key === '/history' && (
               <div className={styles.iconWrap}>
-                <IconHistory size={18} />
+                <IconHistory className={styles.icon} size={18} />
               </div>
             )}
             {i.label}
