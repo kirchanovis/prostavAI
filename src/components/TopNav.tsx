@@ -30,10 +30,16 @@ export function TopNav({
           <button
             key={i.key}
             type="button"
-            className={[styles.link, isActive ? styles.linkActive : ''].filter(Boolean).join(' ')}
+            className={[styles.link, i.key === '/history' ? styles.linkWithIcon : '', isActive ? styles.linkActive : '']
+              .filter(Boolean)
+              .join(' ')}
             onClick={() => onSelect(i.key)}
           >
-            {i.key === '/history' && <IconHistory size={18} />}
+            {i.key === '/history' && (
+              <div className={styles.iconWrap}>
+                <IconHistory size={18} />
+              </div>
+            )}
             {i.label}
           </button>
         );

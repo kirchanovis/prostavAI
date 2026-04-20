@@ -20,6 +20,20 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  position: relative;
+}
+
+.linkWithIcon {
+  padding-left: 32px;
+}
+
+.iconWrap {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 0;
+  display: grid;
+  place-items: center;
 }
 
 .linkActive {
