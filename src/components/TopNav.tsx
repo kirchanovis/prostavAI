@@ -1,6 +1,6 @@
 import { IconHistory } from '../icons';
-import { getActiveNavKey } from './getActiveNavKey';
 import styles from './TopNav.module.scss';
+import { getActiveNavKey } from '../utils/getActiveNavKey';
 
 export type TopNavItem = { key: string; label: string };
 
