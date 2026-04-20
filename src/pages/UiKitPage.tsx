@@ -1,4 +1,5 @@
 import { Card, Divider, Space, Typography } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
@@ -10,6 +11,7 @@ import { NewsImageWideCard } from '../components/news/NewsImageWideCard';
 import { NewsVideoCard } from '../components/news/NewsVideoCard';
 import { TopNewsBlock } from '../components/news/TopNewsBlock';
 import { TopNav } from '../components/TopNav';
+import { topNavItems } from '../components/topNavItems';
 import {
   IconChat,
   IconClock,
@@ -36,6 +38,7 @@ const demoTopNewsTitles: string[] = [
 ];
 
 export function UiKitPage() {
+  const navigate = useNavigate();
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
       <Typography.Title level={4} style={{ margin: 0 }}>
@@ -194,7 +197,7 @@ export function UiKitPage() {
       </Card>
 
       <Card title="TopNav" style={{ width: '100%' }}>
-        <TopNav />
+        <TopNav items={topNavItems} onSelect={(key) => navigate(key)} />
       </Card>
     </Space>
   );

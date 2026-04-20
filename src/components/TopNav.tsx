@@ -1,19 +1,18 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import styles from './TopNav.module.scss';
 
-const items = [
-  { key: '/', label: 'Главная' },
-  { key: '/stavropol', label: 'Ставрополь' },
-  { key: '/krai', label: 'Ставропольский край' },
-  { key: '/skfo', label: 'СКФО' },
-  { key: '/articles', label: 'Статьи' },
-  { key: '/photo-reports', label: 'Фоторепортажи' },
-  { key: '/history', label: 'История Ставрополья' },
-] as const;
+export type TopNavItem = { key: string; label: string };
 
-export function TopNav({ className }: { className?: string }) {
-  const navigate = useNavigate();
+export function TopNav({
+  className,
+  items,
+  onSelect,
+}: {
+  className?: string;
+  items: readonly TopNavItem[];
+  onSelect: (key: string) => void;
+}) {
   const location = useLocation();
 
   const activeKey =
@@ -31,7 +30,7 @@ export function TopNav({ className }: { className?: string }) {
             key={i.key}
             type="button"
             className={[styles.link, isActive ? styles.linkActive : ''].filter(Boolean).join(' ')}
-            onClick={() => navigate(i.key)}
+            onClick={() => onSelect(i.key)}
           >
             {i.label}
           </button>
