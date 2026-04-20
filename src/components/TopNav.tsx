@@ -1,36 +1,44 @@
-import { Menu } from 'antd';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { IconHistory } from '../icons';
+import styles from './TopNav.module.scss';
+import { getActiveNavKey } from '../utils/getActiveNavKey';
 
-const items = [
-  { key: '/', label: 'Главная' },
-  { key: '/stavropol', label: 'Ставрополь' },
-  { key: '/krai', label: 'Ставропольский край' },
-  { key: '/skfo', label: 'СКФО' },
-  { key: '/articles', label: 'Статьи' },
-  { key: '/photo-reports', label: 'Фоторепортажи' },
-  { key: '/history', label: 'История Ставрополья' },
-] as const;
+export type TopNavItem = { key: string; label: string };
 
-export function TopNav({ className }: { className?: string }) {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  // Select best matching key by current pathname
-  const selectedKeys = [
-    items
-      .map((i) => i.key)
-      .sort((a, b) => b.length - a.length)
-      .find((k) => (k === '/' ? location.pathname === '/' : location.pathname.startsWith(k))) ?? '/',
-  ];
+export function TopNav({
+  className,
+  items,
+  onSelect,
+  locationPathname,
+}: {
+  className?: string;
+  items: readonly TopNavItem[];
+  onSelect: (key: string) => void;
+  locationPathname: string;
+}) {
+  const activeKey = getActiveNavKey(items, locationPathname);
 
   return (
-    <Menu
-      mode="horizontal"
-      selectedKeys={selectedKeys}
-      items={items.map((i) => ({ key: i.key, label: i.label }))}
-      onClick={(e) => navigate(e.key)}
-      className={className}
-      style={{ flex: 1, minWidth: 0 }}
-    />
+    <nav className={[styles.nav, className].filter(Boolean).join(' ')}>
+      {items.map((i) => {
+        const isActive = i.key === activeKey;
+        return (
+          <button
+            key={i.key}
+            type="button"
+            className={[styles.link, i.key === '/history' ? styles.linkWithIcon : '', isActive ? styles.linkActive : '']
+              .filter(Boolean)
+              .join(' ')}
+            onClick={() => onSelect(i.key)}
+          >
+            {i.key === '/history' && (
+              <div className={styles.iconWrap}>
+                <IconHistory className={styles.icon} size={18} />
+              </div>
+            )}
+            {i.label}
+          </button>
+        );
+      })}
+    </nav>
   );
 }

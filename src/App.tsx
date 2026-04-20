@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import './App.css';
 import logo from './assets/brand/logo.jpg';
-import { TopNav } from './components/TopNav';
+import { MenuContainer } from './containers/MenuContainer';
 import { ArticlesPage } from './pages/ArticlesPage';
 import { HomePage } from './pages/HomePage';
 import { StubPage } from './pages/StubPage';
@@ -19,7 +19,7 @@ export default function App() {
         <div className={styles.brand}>
           <img src={logo} className={styles.logo} alt="Логотип" />
         </div>
-        <TopNav className={styles.topMenu} />
+        <MenuContainer className={styles.topMenu} />
       </Header>
 
       <Content style={{ padding: 24, maxWidth: 1100, width: '100%', margin: '0 auto' }}>
