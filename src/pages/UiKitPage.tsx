@@ -38,7 +38,7 @@ const demoTopNewsTitles: string[] = [
 ];
 
 export function UiKitPage() {
-  const navigate = useNavigate();
+  useNavigate();
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
       <Typography.Title level={4} style={{ margin: 0 }}>
@@ -197,7 +197,7 @@ export function UiKitPage() {
       </Card>
 
       <Card title="TopNav" style={{ width: '100%' }}>
-        <TopNav items={topNavItems} onSelect={(key) => navigate(key)} />
+        <TopNav items={topNavItems} onSelect={() => {}} />
       </Card>
     </Space>
   );
