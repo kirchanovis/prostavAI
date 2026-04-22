@@ -20,15 +20,15 @@
 }
 
 .time {
-  color: var(--color-text-caption);
+  color: var(--color-text-muted);
   font-size: var(--typo-caption-size);
   font-weight: var(--typo-caption-weight);
   line-height: 16px;
 }
 
 .title {
-  color: var(--color-text-muted);
-  font-size: var(--typo-h4-size);
-  font-weight: var(--typo-h4-weight);
+  color: var(--color-text-primary);
+  font-size: var(--typo-body-size);
+  font-weight: var(--typo-body-weight);
   line-height: 1.35;
 }
