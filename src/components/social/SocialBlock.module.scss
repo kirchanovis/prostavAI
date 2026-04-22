@@ -33,14 +33,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-muted);
+  color: var(--ds-scrollbar);
 }
 
 .stat {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--color-text-muted);
+  color: var(--ds-scrollbar);
 }
 
 .count {

@@ -29,15 +29,15 @@ export function SocialBlock({
 
       <div className={styles.right}>
         <div className={styles.stat}>
-          <IconChat size={22} />
+          <IconChat size={16} />
           <span className={styles.count}>{stats?.comments ?? 0}</span>
         </div>
         <div className={styles.stat}>
-          <IconLike size={22} />
+          <IconLike size={16} />
           <span className={styles.count}>{stats?.likes ?? 0}</span>
         </div>
         <div className={styles.stat}>
-          <IconEye size={22} />
+          <IconEye size={16} />
           <span className={styles.count}>{stats?.views ?? 0}</span>
         </div>
       </div>
