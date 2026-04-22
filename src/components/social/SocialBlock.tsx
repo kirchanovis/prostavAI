@@ -32,7 +32,7 @@ export function SocialBlock({
           <IconChat size={16} />
           <span className={styles.count}>{stats?.comments ?? 0}</span>
         </div>
-        <div className={styles.stat}>
+        <div className={[styles.stat, styles.statLike].join(' ')}>
           <IconLike size={16} />
           <span className={styles.count}>{stats?.likes ?? 0}</span>
         </div>
