@@ -1,4 +1,4 @@
-import { Card, Checkbox, Divider, Space, Typography } from 'antd';
+import { Card, Checkbox, Divider, Space, Switch, Typography } from 'antd';
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -43,6 +43,7 @@ const demoTopNewsTitles: string[] = [
 export function UiKitPage() {
   const location = useLocation();
   const [showOnSceneMedia, setShowOnSceneMedia] = useState(false);
+  const [showOnSceneVideo, setShowOnSceneVideo] = useState(false);
   useNavigate();
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
@@ -224,6 +225,19 @@ export function UiKitPage() {
                 : undefined
             }
           />
+
+          <Space align="center" size={10}>
+            <Typography.Text type="secondary">Показать видео</Typography.Text>
+            <Switch checked={showOnSceneVideo} onChange={setShowOnSceneVideo} />
+          </Space>
+
+          {showOnSceneVideo && (
+            <OnSceneReportCard
+              timeLabel="20 минут назад"
+              title="Видео с места событий"
+              media={{ type: 'video', src: '/src/assets/videos/README.md', alt: 'On-scene video' }}
+            />
+          )}
         </Space>
       </Card>
     </Space>
