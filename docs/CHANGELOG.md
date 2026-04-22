@@ -12,6 +12,13 @@
 - NewsImageWideCard: wide‑карточка 620px + кнопка «Хронология событий»
 - NewsVideoCard: 620px split‑карточка (слева фото + IconPlay, справа текстовый блок)
 
+### UI / Blocks
+
+- SiteHeader: шапка сайта (logo сверху, меню снизу), высота 150px, правки отступов/underline навигации
+- SocialBlock: компонент соц.активности (иконки/цвета/размеры + паддинги/гэпы)
+- OnSceneReportCard: карточка «репортаж с места событий» (image/video/YouTube iframe, настройки демо в UI kit)
+- PhotoBlock: фото-блок 768×510 + демо
+
 ### UI kit
 
 - UI Kit: добавлены демо‑блоки для карточек новостей и TopNav
