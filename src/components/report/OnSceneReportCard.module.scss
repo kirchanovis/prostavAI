@@ -1,0 +1,36 @@
+.card {
+  width: 100%;
+  max-width: 768px;
+  border-radius: 4px;
+  background: var(--color-bg);
+  box-shadow: 0px 1px 3px rgba(71, 60, 56, 0.2);
+  overflow: hidden;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.media {
+  width: 90%;
+  min-height: 350px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 0 auto;
+  display: block;
+  border: 0;
+}
+
+.time {
+  color: var(--color-text-muted);
+  font-size: var(--typo-caption-size);
+  font-weight: var(--typo-caption-weight);
+  line-height: 16px;
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-size: var(--typo-body-size);
+  font-weight: var(--typo-body-weight);
+  line-height: 1.35;
+}

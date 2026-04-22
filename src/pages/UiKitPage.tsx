@@ -1,4 +1,5 @@
-import { Card, Divider, Space, Typography } from 'antd';
+import { Card, Divider, Radio, Space, Typography } from 'antd';
+import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
@@ -11,6 +12,7 @@ import { NewsImageWideCard } from '../components/news/NewsImageWideCard';
 import { NewsVideoCard } from '../components/news/NewsVideoCard';
 import { TopNewsBlock } from '../components/news/TopNewsBlock';
 import { PhotoBlock } from '../components/photo/PhotoBlock';
+import { OnSceneReportCard } from '../components/report/OnSceneReportCard';
 import { TopNav } from '../components/TopNav';
 import { topNavItems } from '../components/topNavItems';
 import {
@@ -40,6 +42,7 @@ const demoTopNewsTitles: string[] = [
 
 export function UiKitPage() {
   const location = useLocation();
+  const [onSceneMediaMode, setOnSceneMediaMode] = useState<'none' | 'photo' | 'video' | 'youtube'>('none');
   useNavigate();
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
@@ -204,6 +207,31 @@ export function UiKitPage() {
 
       <Card title="PhotoBlock" style={{ width: '100%' }}>
         <PhotoBlock src="/src/assets/photos/IMG_2530.png" alt="Demo photo" />
+      </Card>
+
+      <Card title="OnSceneReportCard" style={{ width: '100%' }}>
+        <Space direction="vertical" size={12} style={{ width: '100%' }}>
+          <Radio.Group value={onSceneMediaMode} onChange={(e) => setOnSceneMediaMode(e.target.value)}>
+            <Radio value="none">Без медиа</Radio>
+            <Radio value="photo">Показать фото</Radio>
+            <Radio value="video">Показать видео</Radio>
+            <Radio value="youtube">YouTube</Radio>
+          </Radio.Group>
+
+          <OnSceneReportCard
+            timeLabel="1 час назад"
+            title="Репортаж с места событий: что известно к этому часу"
+            media={
+              onSceneMediaMode === 'photo'
+                ? { type: 'image', src: '/src/assets/photos/IMG_2244.png', alt: 'On-scene report' }
+                : onSceneMediaMode === 'video'
+                  ? { type: 'video', src: '/src/assets/videos/README.md' }
+                  : onSceneMediaMode === 'youtube'
+                    ? { type: 'youtube', videoId: 'k_TqWxnGbL4', title: 'YouTube' }
+                    : undefined
+            }
+          />
+        </Space>
       </Card>
     </Space>
   );
