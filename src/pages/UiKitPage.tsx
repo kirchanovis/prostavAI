@@ -13,6 +13,7 @@ import { NewsVideoCard } from '../components/news/NewsVideoCard';
 import { TopNewsBlock } from '../components/news/TopNewsBlock';
 import { PhotoBlock } from '../components/photo/PhotoBlock';
 import { OnSceneReportCard } from '../components/report/OnSceneReportCard';
+import { SocialBlock } from '../components/social/SocialBlock';
 import { TopNav } from '../components/TopNav';
 import { topNavItems } from '../components/topNavItems';
 import {
@@ -232,6 +233,10 @@ export function UiKitPage() {
             }
           />
         </Space>
+      </Card>
+
+      <Card title="SocialBlock" style={{ width: '100%' }}>
+        <SocialBlock stats={{ comments: 124, likes: 87, views: 1260 }} />
       </Card>
     </Space>
   );
