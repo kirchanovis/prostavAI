@@ -11,6 +11,7 @@ import { NewsImageWideCard } from '../components/news/NewsImageWideCard';
 import { NewsVideoCard } from '../components/news/NewsVideoCard';
 import { TopNewsBlock } from '../components/news/TopNewsBlock';
 import { PhotoBlock } from '../components/photo/PhotoBlock';
+import { SocialBar } from '../components/social/SocialBar';
 import { TopNav } from '../components/TopNav';
 import { topNavItems } from '../components/topNavItems';
 import {
@@ -204,6 +205,10 @@ export function UiKitPage() {
 
       <Card title="PhotoBlock" style={{ width: '100%' }}>
         <PhotoBlock src="/src/assets/photos/IMG_2530.png" alt="Demo photo" />
+      </Card>
+
+      <Card title="SocialBar" style={{ width: '100%' }}>
+        <SocialBar stats={{ comments: 124, likes: 87, views: 1260 }} />
       </Card>
     </Space>
   );
