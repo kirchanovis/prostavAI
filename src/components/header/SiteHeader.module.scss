@@ -1,0 +1,25 @@
+.header {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 0 10px;
+  background: var(--color-bg-light);
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.logo {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.bottom {
+  display: flex;
+  align-items: flex-end;
+}
