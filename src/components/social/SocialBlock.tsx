@@ -1,7 +1,7 @@
-import styles from './SocialBar.module.scss';
+import styles from './SocialBlock.module.scss';
 import { IconChat, IconEye, IconFacebook, IconLike, IconOk, IconTwitter, IconVk } from '../../icons';
 
-export function SocialBar({
+export function SocialBlock({
   onShare,
   stats,
 }: {
