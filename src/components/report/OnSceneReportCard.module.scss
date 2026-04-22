@@ -13,10 +13,12 @@
 
 .media {
   width: 90%;
+  height: 240px;
   object-fit: cover;
   border-radius: 4px;
   margin: 0 auto;
   display: block;
+  border: 0;
 }
 
 .time {

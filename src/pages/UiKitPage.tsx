@@ -42,7 +42,7 @@ const demoTopNewsTitles: string[] = [
 
 export function UiKitPage() {
   const location = useLocation();
-  const [onSceneMediaMode, setOnSceneMediaMode] = useState<'none' | 'photo' | 'video'>('none');
+  const [onSceneMediaMode, setOnSceneMediaMode] = useState<'none' | 'photo' | 'video' | 'youtube'>('none');
   useNavigate();
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
@@ -215,6 +215,7 @@ export function UiKitPage() {
             <Radio value="none">Без медиа</Radio>
             <Radio value="photo">Показать фото</Radio>
             <Radio value="video">Показать видео</Radio>
+            <Radio value="youtube">YouTube</Radio>
           </Radio.Group>
 
           <OnSceneReportCard
@@ -224,8 +225,10 @@ export function UiKitPage() {
               onSceneMediaMode === 'photo'
                 ? { type: 'image', src: '/src/assets/photos/IMG_2244.png', alt: 'On-scene report' }
                 : onSceneMediaMode === 'video'
-                  ? { type: 'video', src: '/src/assets/videos/README.md', alt: 'On-scene video' }
-                  : undefined
+                  ? { type: 'video', src: '/src/assets/videos/README.md' }
+                  : onSceneMediaMode === 'youtube'
+                    ? { type: 'youtube', videoId: 'k_TqWxnGbL4', title: 'YouTube' }
+                    : undefined
             }
           />
         </Space>
