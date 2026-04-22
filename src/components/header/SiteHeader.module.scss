@@ -1,0 +1,30 @@
+.header {
+  height: 150px;
+  padding: 24px;
+  padding-bottom: 30px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-bg-light);
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.logo {
+  height: 68px;
+  width: auto;
+  display: block;
+}
+
+.bottom {
+  display: flex;
+  align-items: flex-end;
+  padding: 30px 0 0 0;
+}

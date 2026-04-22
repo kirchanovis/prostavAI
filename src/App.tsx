@@ -2,8 +2,7 @@ import { Layout } from 'antd';
 import { Route, Routes } from 'react-router-dom';
 
 import './App.css';
-import logo from './assets/brand/logo.jpg';
-import { MenuContainer } from './containers/MenuContainer';
+import { SiteHeader } from './components/header/SiteHeader';
 import { ArticlesPage } from './pages/ArticlesPage';
 import { HomePage } from './pages/HomePage';
 import { StubPage } from './pages/StubPage';
@@ -16,10 +15,7 @@ export default function App() {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Header className={styles.topHeader}>
-        <div className={styles.brand}>
-          <img src={logo} className={styles.logo} alt="Логотип" />
-        </div>
-        <MenuContainer className={styles.topMenu} />
+        <SiteHeader />
       </Header>
 
       <Content style={{ padding: 24, maxWidth: 1100, width: '100%', margin: '0 auto' }}>
