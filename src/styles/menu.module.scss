@@ -3,10 +3,10 @@
 .topHeader {
   background: var(--color-bg-light);
   padding: 0;
-  height: 72px;
-  line-height: 72px;
+  height: 150px;
+  line-height: normal;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 24px;
 }
 
