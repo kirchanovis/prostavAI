@@ -211,7 +211,7 @@ export const newsMockData = [
     title: 'Реклама: скидки на доставку продуктов — до 30% в апреле',
     date: '2022-04-08',
     author: 'Партнерский материал',
-    image: 'https://picsum.photos/300/200?random=13',
+    image: '/src/assets/brand/rox.png',
     description: 'Спецпредложение партнёра. Условия акции действуют ограниченное время.',
     views: 54,
     likes: 0,
