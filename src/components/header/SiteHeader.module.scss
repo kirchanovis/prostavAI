@@ -2,13 +2,14 @@
   height: 150px;
   padding: 24px;
   padding-bottom: 30px;
-  max-width: 1100px;
+  max-width: 1265px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: var(--color-bg-light);
+  border-bottom: 1px solid var(--color-surface);
 }
 
 .top {
