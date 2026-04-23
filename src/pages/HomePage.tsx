@@ -1,4 +1,4 @@
-import { Space, Typography } from 'antd';
+import { Space } from 'antd';
 import { useEffect, useState } from 'react';
 
 import { mockFetch } from '../api/mockFetch';
@@ -12,24 +12,21 @@ type NewsItem = {
   date: string;
 };
 
-type ApiResponse<T> = { items: T[] };
-
 export function HomePage() {
   const [news, setNews] = useState<NewsItem[]>([]);
 
   useEffect(() => {
     (async () => {
-      const res = await mockFetch<ApiResponse<NewsItem>>('/api/news');
-      if (res.ok) setNews((await res.json()).items);
+      const res = await mockFetch<{ items: NewsItem[] }>('/api/news');
+      if (!res.ok) return;
+
+      const data = await res.json();
+      setNews(data.items);
     })();
   }, []);
 
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
-      <Typography.Title level={4} style={{ margin: 0 }}>
-        Главная
-      </Typography.Title>
-
       <NewsMasonryGrid
         items={news}
         renderItem={(item) => <NewsCard category={item.category} title={item.title} publishedAt={item.date} />}
