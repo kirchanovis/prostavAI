@@ -1,3 +1,4 @@
+import { ConfigProvider } from 'antd';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
@@ -12,8 +13,16 @@ import './styles/colors.scss';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+    <ConfigProvider
+      theme={{
+        token: {
+          colorBgLayout: '#fff',
+        },
+      }}
+    >
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ConfigProvider>
+  </React.StrictMode>,
 );
