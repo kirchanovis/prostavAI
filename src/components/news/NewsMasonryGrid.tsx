@@ -14,10 +14,11 @@ export function NewsMasonryGrid<T>({
   gutter?: number;
 }) {
   return (
-    <Masonry columns={columns} gutter={gutter}>
-      {items.map((item, idx) => (
-        <div key={idx}>{renderItem(item)}</div>
-      ))}
-    </Masonry>
+    <Masonry
+      columns={columns}
+      gutter={gutter}
+      items={items.map((item, idx) => ({ key: idx, data: item }))}
+      itemRender={(info) => renderItem(info.data)}
+    />
   );
 }
