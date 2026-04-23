@@ -17,7 +17,10 @@ export function HomePage() {
   useEffect(() => {
     (async () => {
       const res = await fetch('/api/news');
-      if (res.ok) setNews(await res.json());
+      if (!res.ok) return;
+
+      const data: { items: NewsItem[] } = await res.json();
+      setNews(data.items);
     })();
   }, []);
 
