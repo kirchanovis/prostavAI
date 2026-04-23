@@ -18,7 +18,9 @@ export function NewsMasonryGrid<T extends BlockAwareItem>({
           key={idx}
           className={styles.item}
           data-block={item.block ?? 'NewsCard'}
-          style={item.block === 'NewsImageWideCard' ? { gridColumn: 'span 2' } : undefined}
+          style={
+            item.block === 'NewsImageWideCard' || item.block === 'NewsVideoCard' ? { gridColumn: 'span 2' } : undefined
+          }
         >
           {renderItem(item)}
         </div>
