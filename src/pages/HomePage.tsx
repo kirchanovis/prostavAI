@@ -1,6 +1,7 @@
 import { Space } from 'antd';
 import { useEffect, useState } from 'react';
 
+import { mockFetch } from '../api/mockFetch';
 import { NewsCard } from '../components/news/NewsCard';
 import { NewsMasonryGrid } from '../components/news/NewsMasonryGrid';
 
@@ -16,10 +17,10 @@ export function HomePage() {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch('/api/news');
+      const res = await mockFetch<{ items: NewsItem[] }>('/api/news');
       if (!res.ok) return;
 
-      const data: { items: NewsItem[] } = await res.json();
+      const data = await res.json();
       setNews(data.items);
     })();
   }, []);
