@@ -64,9 +64,9 @@ body {
   margin: 0;
 }
 
-/* Ant Design Layout background */
-div.ant-layout {
-  background: var(--bg);
+/* App layout background (DS light background) */
+.app-layout {
+  background: var(--ds-lightBg);
 }
 
 h1,

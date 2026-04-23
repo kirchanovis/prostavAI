@@ -13,7 +13,7 @@ const { Header, Content, Footer } = Layout;
 
 export default function App() {
   return (
-    <Layout className="ant-layout" style={{ minHeight: '100vh' }}>
+    <Layout className="app-layout" style={{ minHeight: '100vh' }}>
       <Header className={styles.topHeader}>
         <SiteHeader />
       </Header>
