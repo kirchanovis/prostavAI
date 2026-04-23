@@ -1,6 +1,7 @@
 export const newsMockData = [
   {
     id: 1,
+    block: 'NewsCard',
     category: 'Ставрополь',
     title: 'Губернатор Ставрополья провел встречу с главой региональной Думы',
     date: '2022-04-01',
@@ -19,6 +20,7 @@ export const newsMockData = [
   },
   {
     id: 2,
+    block: 'NewsCard',
     category: 'Ставропольский край',
     title: 'В Ставрополье открыли новый супермаркет',
     date: '2022-04-02',
@@ -36,6 +38,7 @@ export const newsMockData = [
   },
   {
     id: 3,
+    block: 'NewsImageCard',
     category: 'СКФО',
     title: 'В Ставрополье открыли первый центр занятости для людей с ограниченными возможностями',
     date: '2022-04-03',
@@ -54,6 +57,7 @@ export const newsMockData = [
   },
   {
     id: 4,
+    block: 'NewsCard',
     category: 'Статьи',
     title: 'В Ставропольском крае открыли выставку живописи местных художников',
     date: '2022-04-04',
@@ -71,6 +75,7 @@ export const newsMockData = [
   },
   {
     id: 5,
+    block: 'NewsImageWideCard',
     category: 'Фоторепортажи',
     title: 'Открытие нового музея в Ставрополе',
     date: '2022-04-04',
@@ -88,6 +93,7 @@ export const newsMockData = [
   },
   {
     id: 6,
+    block: 'NewsCard',
     category: 'Ставрополь',
     title: 'Праздничный концерт в честь Дня города',
     date: '2022-04-04',
@@ -105,6 +111,7 @@ export const newsMockData = [
   },
   {
     id: 7,
+    block: 'NewsImageCard',
     category: 'Ставропольский край',
     title: 'В Ставрополе открылся новый парк развлечений',
     date: '2022-04-04',
@@ -122,6 +129,7 @@ export const newsMockData = [
   },
   {
     id: 8,
+    block: 'NewsCard',
     category: 'СКФО',
     title: 'В Ставропольском крае открылась новая больница',
     date: '2022-04-04',
@@ -139,6 +147,7 @@ export const newsMockData = [
   },
   {
     id: 9,
+    block: 'NewsCard',
     category: 'Ставрополь',
     title: 'В Ставрополе обновят освещение на центральных улицах',
     date: '2022-04-05',
@@ -156,6 +165,7 @@ export const newsMockData = [
   },
   {
     id: 10,
+    block: 'NewsCard',
     category: 'Ставропольский край',
     title: 'В крае стартовала программа поддержки молодых семей',
     date: '2022-04-06',
@@ -173,9 +183,11 @@ export const newsMockData = [
   },
   {
     id: 11,
+    block: 'NewsVideoCard',
     category: 'СКФО',
     title: 'В СКФО откроют новые туристические маршруты к летнему сезону',
     date: '2022-04-07',
+    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     author: 'Дмитрий Орлов',
     image: 'https://picsum.photos/300/200?random=11',
     description: 'Маршруты объединят природные достопримечательности и исторические места нескольких регионов округа.',
@@ -190,6 +202,7 @@ export const newsMockData = [
   },
   {
     id: 12,
+    block: 'NewsImageCard',
     category: 'Статьи',
     title: 'Как менялся Ставрополь: 5 историй из городских архивов',
     date: '2022-04-08',
@@ -207,6 +220,7 @@ export const newsMockData = [
   },
   {
     id: 13,
+    block: 'AdImageCard',
     category: 'Реклама',
     title: 'Реклама: скидки на доставку продуктов — до 30% в апреле',
     date: '2022-04-08',
@@ -225,6 +239,7 @@ export const newsMockData = [
   },
   {
     id: 14,
+    block: 'NewsImageWideCard',
     category: 'Фоторепортажи',
     title: 'Фоторепортаж: весенний субботник в городском парке',
     date: '2022-04-09',
@@ -242,9 +257,11 @@ export const newsMockData = [
   },
   {
     id: 15,
+    block: 'NewsVideoCard',
     category: 'Ставрополь',
     title: 'На Крепостной горе пройдёт фестиваль уличной еды',
     date: '2022-04-10',
+    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     author: 'Сергей Волков',
     image: 'https://picsum.photos/300/200?random=15',
     description: 'Организаторы обещают фудкорты, музыку и зону для детей. Вход свободный.',
