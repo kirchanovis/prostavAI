@@ -65,7 +65,7 @@ body {
 }
 
 /* App layout background (DS light background) */
-.app-layout {
+.layout {
   background: var(--ds-lightBg);
 }
 
