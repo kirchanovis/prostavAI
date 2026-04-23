@@ -18,7 +18,7 @@ export default function App() {
         <SiteHeader />
       </Header>
 
-      <Content style={{ padding: 24, maxWidth: 1100, width: '100%', margin: '0 auto' }}>
+      <Content style={{ padding: 24, maxWidth: 1265, width: '100%', margin: '0 auto' }}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/stavropol" element={<StubPage title="Ставрополь" />} />
