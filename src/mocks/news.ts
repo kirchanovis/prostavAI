@@ -222,6 +222,40 @@ export const newsMockData = [
       telegram: 'https://www.telegram.com',
     },
   },
+  {
+    id: 14,
+    category: 'Фоторепортажи',
+    title: 'Фоторепортаж: весенний субботник в городском парке',
+    date: '2022-04-09',
+    author: 'Ольга Кузнецова',
+    image: 'https://picsum.photos/300/200?random=14',
+    description: 'Как прошёл субботник и что изменилось в парке — в нашей фотоподборке.',
+    views: 121,
+    likes: 13,
+    socialMedia: {
+      facebook: 'https://www.facebook.com',
+      twitter: 'https://www.twitter.com',
+      vkontakte: 'https://www.vk.com',
+      telegram: 'https://www.telegram.com',
+    },
+  },
+  {
+    id: 15,
+    category: 'Ставрополь',
+    title: 'На Крепостной горе пройдёт фестиваль уличной еды',
+    date: '2022-04-10',
+    author: 'Сергей Волков',
+    image: 'https://picsum.photos/300/200?random=15',
+    description: 'Организаторы обещают фудкорты, музыку и зону для детей. Вход свободный.',
+    views: 264,
+    likes: 18,
+    socialMedia: {
+      facebook: 'https://www.facebook.com',
+      twitter: 'https://www.twitter.com',
+      vkontakte: 'https://www.vk.com',
+      telegram: 'https://www.telegram.com',
+    },
+  },
 ] as const;
 
 export type NewsItem = (typeof newsMockData)[number];
