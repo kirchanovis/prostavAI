@@ -13,7 +13,7 @@ const { Header, Content, Footer } = Layout;
 
 export default function App() {
   return (
-    <Layout style={{ minHeight: '100vh' }}>
+    <Layout className="layout" style={{ minHeight: '100vh' }}>
       <Header className={styles.topHeader}>
         <SiteHeader />
       </Header>
