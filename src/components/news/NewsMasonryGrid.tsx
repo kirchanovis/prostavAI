@@ -2,7 +2,9 @@ import { Masonry } from 'antd';
 
 import type React from 'react';
 
-export function NewsMasonryGrid<T>({
+type BlockAwareItem = { block?: string };
+
+export function NewsMasonryGrid<T extends BlockAwareItem>({
   items,
   renderItem,
   columns = 4,
@@ -17,7 +19,12 @@ export function NewsMasonryGrid<T>({
     <Masonry
       columns={columns}
       gutter={gutter}
-      items={items.map((item, idx) => ({ key: idx, data: item }))}
+      items={items.map((item, idx) => ({
+        key: idx,
+        data: item,
+        // Make wide cards span 2 columns
+        column: item.block === 'NewsImageWideCard' ? 2 : 1,
+      }))}
       itemRender={(info) => renderItem(info.data)}
     />
   );
