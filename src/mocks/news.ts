@@ -274,6 +274,43 @@ export const newsMockData = [
       telegram: 'https://www.telegram.com',
     },
   },
+  {
+    id: 16,
+    block: 'NewsCard',
+    category: 'Ставрополь',
+    title: 'В центре Ставрополя перекроют движение на время ремонта',
+    date: '2022-04-11',
+    author: 'Ирина Павлова',
+    image: 'https://picsum.photos/300/200?random=16',
+    description: 'Ограничения будут действовать на нескольких участках, водителей просят планировать маршрут заранее.',
+    views: 311,
+    likes: 21,
+    socialMedia: {
+      facebook: 'https://www.facebook.com',
+      twitter: 'https://www.twitter.com',
+      vkontakte: 'https://www.vk.com',
+      telegram: 'https://www.telegram.com',
+    },
+  },
+  {
+    id: 17,
+    block: 'NewsCard',
+    category: 'Ставропольский край',
+    title: 'В регионе расширят программу благоустройства дворов',
+    date: '2022-04-12',
+    author: 'Андрей Федоров',
+    image: 'https://picsum.photos/300/200?random=17',
+    description:
+      'В 2022 году планируется обновить ещё несколько десятков дворовых территорий в разных муниципалитетах.',
+    views: 204,
+    likes: 14,
+    socialMedia: {
+      facebook: 'https://www.facebook.com',
+      twitter: 'https://www.twitter.com',
+      vkontakte: 'https://www.vk.com',
+      telegram: 'https://www.telegram.com',
+    },
+  },
 ] as const;
 
 export type NewsItem = (typeof newsMockData)[number];
