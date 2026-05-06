@@ -17,7 +17,7 @@ export function DetailPage() {
         margin: '0 auto',
       }}
     >
-      <Typography.Title level={1} style={{ margin: 0, fontSize: 42, lineHeight: 1.15 }}>
+      <Typography.Title level={1} style={{ margin: 0, fontSize: 42, lineHeight: 1.15, color: '#5e514f' }}>
         16 апреля стартует краевой автопробег «Эх, путь-дорожка фронтовая» от Вечного огня
       </Typography.Title>
 
