@@ -75,7 +75,7 @@ export const newsMockData = [
   },
   {
     id: 5,
-    block: 'NewsImageWideCard',
+    block: 'NewsCard',
     category: 'Фоторепортажи',
     title: 'Открытие нового музея в Ставрополе',
     date: '2022-04-04',
