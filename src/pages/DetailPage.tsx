@@ -7,7 +7,7 @@ import { commentsMockData } from '../mocks/comments';
 
 export function DetailPage() {
   return (
-    <div style={{ display: 'grid', gap: 16, justifyItems: 'start' }}>
+    <div style={{ display: 'grid', gap: 16, justifyItems: 'start', maxWidth: 700, width: '100%' }}>
       <Typography.Title level={1} style={{ margin: 0, fontSize: 42, lineHeight: 1.15 }}>
         16 апреля стартует краевой автопробег «Эх, путь-дорожка фронтовая» от Вечного огня
       </Typography.Title>
