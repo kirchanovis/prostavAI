@@ -75,8 +75,9 @@
 
 .title {
   color: var(--color-text-muted);
-  font-size: 12px;
-  font-weight: 500;
+  font-size: var(--typo-home-caption-size);
+  font-weight: var(--typo-home-caption-weight);
+  line-height: var(--typo-home-caption-line-height);
 }
 
 .list {
