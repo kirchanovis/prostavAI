@@ -34,20 +34,26 @@
 
 .author {
   color: var(--color-text-muted);
-  font-size: 12px;
-  font-weight: 500;
+  font-family: var(--font-family-base);
+  font-size: var(--typo-home-caption-size);
+  font-weight: var(--typo-home-caption-weight);
+  line-height: var(--typo-home-caption-line-height);
 }
 
 .date {
   color: var(--color-text-comment);
-  font-size: 12px;
-  font-weight: 500;
+  font-family: var(--font-family-base);
+  font-size: var(--typo-home-caption-size);
+  font-weight: var(--typo-home-caption-weight);
+  line-height: var(--typo-home-caption-line-height);
 }
 
 .text {
   color: var(--color-text-primary);
-  font-size: 12px;
-  font-weight: 400;
+  font-family: var(--font-family-base);
+  font-size: var(--typo-caption-size);
+  font-weight: var(--typo-caption-weight);
+  line-height: var(--typo-caption-line-height);
   margin: 0;
 }
 
@@ -61,8 +67,10 @@
   padding: 0;
   color: var(--color-primary);
   cursor: pointer;
-  font-size: 12px;
-  font-weight: 500;
+  font-family: var(--font-family-base);
+  font-size: var(--typo-home-caption-size);
+  font-weight: var(--typo-home-caption-weight);
+  line-height: var(--typo-home-caption-line-height);
 }
 
 .replies {
@@ -75,8 +83,10 @@
 
 .title {
   color: var(--color-text-muted);
-  font-size: 12px;
-  font-weight: 500;
+  font-family: var(--font-family-base);
+  font-size: var(--typo-home-caption-size);
+  font-weight: var(--typo-home-caption-weight);
+  line-height: var(--typo-home-caption-line-height);
 }
 
 .list {
