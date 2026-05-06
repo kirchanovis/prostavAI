@@ -146,13 +146,17 @@ export function UiKitPage() {
         <CommentsBlock items={commentsMockData} />
       </Card>
 
-      <Card title="ArticleAuthorBlock" style={{ width: '100%' }}>
+      <div style={{ width: '100%' }}>
+        <Typography.Title level={4} style={{ marginTop: 0 }}>
+          ArticleAuthorBlock
+        </Typography.Title>
+
         <ArticleAuthorBlock
           authorName="Иван Иванов"
           authorAvatarUrl="https://i.pravatar.cc/80?img=8"
           publishedAt="2022-04-05T09:30:00.000Z"
         />
-      </Card>
+      </div>
 
       <Card title="NewsCard" style={{ width: '100%' }}>
         <NewsCard
