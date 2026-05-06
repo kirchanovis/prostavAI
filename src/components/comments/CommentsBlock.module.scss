@@ -67,8 +67,10 @@
   padding: 0;
   color: var(--color-primary);
   cursor: pointer;
-  font-size: 12px;
-  font-weight: 500;
+  font-family: var(--font-family-base);
+  font-size: var(--typo-home-caption-size);
+  font-weight: var(--typo-home-caption-weight);
+  line-height: var(--typo-home-caption-line-height);
 }
 
 .replies {
