@@ -1,0 +1,22 @@
+@use '../styles/typography.scss' as typo;
+
+.wrap {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.h1 {
+  @include typo.typo(h1);
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.h3 {
+  @include typo.typo(h3);
+  margin: 0;
+  color: var(--color-text-primary);
+}
