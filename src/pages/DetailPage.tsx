@@ -1,5 +1,6 @@
 import { Typography } from 'antd';
 
+import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
 import { PhotoBlock } from '../components/photo/PhotoBlock';
 import { SocialBlock } from '../components/social/SocialBlock';
@@ -22,6 +23,12 @@ export function DetailPage() {
       </Typography.Title>
 
       <PhotoBlock src="/src/assets/photos/den-goroda-stavropol-5.jpg" alt="Автопробег" />
+
+      <ArticleAuthorBlock
+        authorName="Администрация Ставрополя"
+        authorAvatarUrl="https://i.pravatar.cc/80?img=5"
+        publishedAt="2022-04-16T09:00:00.000Z"
+      />
 
       <Typography.Title level={3} style={{ margin: 0, fontSize: 21, lineHeight: 1.35 }}>
         4 района и округа, более 100 населенных пунктов Ставропольского края посетят участники автопробега «Эх,
