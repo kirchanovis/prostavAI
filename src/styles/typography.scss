@@ -41,7 +41,6 @@ $font-family-base:
     font-style: var(--typo-h3-style);
     line-height: var(--typo-h3-line-height);
     letter-spacing: var(--typo-h3-letter-spacing, normal);
-    color: var(--typo-h3-color, inherit);
   } @else if $preset == body {
     font-size: var(--typo-body-size);
     font-weight: var(--typo-body-weight);
@@ -99,7 +98,6 @@ $font-family-base:
   --typo-h3-style: normal;
   --typo-h3-line-height: 30px;
   --typo-h3-letter-spacing: 1.05px;
-  --typo-h3-color: #5e514f;
 
   /* 4) Body: Regular 21px */
   --typo-body-size: 21px;
