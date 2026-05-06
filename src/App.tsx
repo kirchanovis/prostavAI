@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { SiteHeader } from './components/header/SiteHeader';
 import { ArticlesPage } from './pages/ArticlesPage';
+import { DetailPage } from './pages/DetailPage';
 import { HomePage } from './pages/HomePage';
 import { StubPage } from './pages/StubPage';
 import { UiKitPage } from './pages/UiKitPage';
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/photo-reports" element={<StubPage title="Фоторепортажи" />} />
           <Route path="/history" element={<StubPage title="История Ставрополья" />} />
           <Route path="/ui" element={<UiKitPage />} />
+          <Route path="/detail/:id" element={<DetailPage />} />
           <Route path="*" element={<StubPage title="404" />} />
         </Routes>
       </Content>
