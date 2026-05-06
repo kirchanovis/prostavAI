@@ -22,7 +22,12 @@ export function DetailPage() {
         16 апреля стартует краевой автопробег «Эх, путь-дорожка фронтовая» от Вечного огня
       </Typography.Title>
 
-      <PhotoBlock src="/src/assets/photos/den-goroda-stavropol-5.jpg" alt="Автопробег" />
+      <PhotoBlock
+        src="/src/assets/photos/den-goroda-stavropol-5.jpg"
+        alt="Автопробег"
+        description="Автопробег «Эх, путь-дорожка фронтовая» стартует от мемориала Вечный огонь"
+        author="Пресс-служба"
+      />
 
       <ArticleAuthorBlock
         authorName="Администрация Ставрополя"
