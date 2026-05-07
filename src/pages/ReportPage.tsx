@@ -1,47 +1,45 @@
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+
 import styles from './NewsPage.module.scss';
+
 import { CommentsBlock } from '../components/comments/CommentsBlock';
 import { OnSceneReportCard } from '../components/report/OnSceneReportCard';
 import { SocialBlock } from '../components/social/SocialBlock';
 import { commentsMockData } from '../mocks/comments';
+import reportApi, { type ReportDetail } from '../mocks/reportApi';
 
 export function ReportPage() {
+  const { id } = useParams();
+  const numericId = Number(id);
+
+  const [detail, setDetail] = useState<ReportDetail | null>(null);
+
+  useEffect(() => {
+    if (!Number.isFinite(numericId)) return;
+
+    reportApi.getReportById(numericId, ({ items }) => {
+      setDetail(items[0] ?? null);
+    });
+  }, [numericId]);
+
+  if (!detail) return null;
+
   return (
     <div className={styles.wrap}>
-      <h1 className={styles.h1}>Репортажи с места событий</h1>
+      <h1 className={styles.h1}>{detail.title}</h1>
 
-      <OnSceneReportCard
-        timeLabel="10 минут назад"
-        title="На проспекте перекрыли движение: что известно"
-        media={{ type: 'image', src: '/src/assets/photos/IMG_2244.png', alt: 'Сцена' }}
+      {detail.items.map((it) => (
+        <OnSceneReportCard key={it.id} timeLabel={it.timeLabel} title={it.title} media={it.media} />
+      ))}
+
+      <SocialBlock
+        stats={{
+          comments: detail.stats?.comments ?? commentsMockData.length,
+          likes: detail.stats?.likes,
+          views: detail.stats?.views,
+        }}
       />
-
-      <OnSceneReportCard
-        timeLabel="35 минут назад"
-        title="Очевидцы публикуют видео: ситуация развивается"
-        media={{ type: 'youtube', videoId: 'k_TqWxnGbL4', title: 'YouTube' }}
-      />
-
-      <OnSceneReportCard
-        timeLabel="1 час назад"
-        title="Коммунальные службы приступили к работам"
-        media={{ type: 'image', src: '/src/assets/photos/IMG_2608.png', alt: 'Работы' }}
-      />
-
-      <OnSceneReportCard
-        timeLabel="2 часа назад"
-        title="Заявление пресс-службы: комментарий официальных лиц"
-        media={{ type: 'image', src: '/src/assets/photos/IMG_1817.png', alt: 'Комментарий' }}
-      />
-
-      <OnSceneReportCard timeLabel="3 часа назад" title="Обновление: подробности уточняются (без медиа)" />
-
-      <OnSceneReportCard
-        timeLabel="Сегодня"
-        title="Фотоподборка: хроника событий"
-        media={{ type: 'image', src: '/src/assets/photos/den-goroda-stavropol-5.jpg', alt: 'Хроника' }}
-      />
-
-      <SocialBlock stats={{ comments: commentsMockData.length, likes: 28, views: 1040 }} />
 
       <div className={styles.center}>
         <div className={styles.centerInner}>
