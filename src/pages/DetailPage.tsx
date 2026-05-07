@@ -34,13 +34,15 @@ export function DetailPage() {
 
         <PhotoBlock src="/src/assets/photos/IMG_1936.png" alt="Велопрогулка" />
 
-        <h3 className={styles.h3}>
+        <p className={styles.newsCaption}>
           Поляны также весьма популярны у велосипедистов. Вообще, Беспутка расположена в 5 км от Ставрополя.
-        </h3>
+        </p>
 
         <PhotoBlock src="/src/assets/photos/AqI6FFiBDNE.jpg" alt="Поляны" />
 
-        <h3 className={styles.h3}>На поляне есть памятник авиаторам. Надпись на нем гласит: "Небо забирает лучших"</h3>
+        <p className={styles.newsCaption}>
+          На поляне есть памятник авиаторам. Надпись на нем гласит: "Небо забирает лучших"
+        </p>
 
         <SocialBlock stats={{ comments: commentsMockData.length, likes: 18, views: 860 }} />
 
