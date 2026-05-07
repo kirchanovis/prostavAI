@@ -30,8 +30,11 @@
 .category {
   justify-self: start;
   color: #ffffff;
-  font-size: 12px;
-  line-height: 16px;
+  font-family: var(--font-family-base);
+  font-size: var(--typo-caption-size);
+  font-weight: var(--typo-caption-weight);
+  line-height: var(--typo-caption-line-height);
+  letter-spacing: var(--typo-caption-letter-spacing, normal);
   background: rgba(246, 241, 238, 0.2);
   border: 1px solid rgba(246, 241, 238, 0.35);
   border-radius: 2px;
@@ -54,6 +57,9 @@
 .meta {
   justify-self: start;
   color: rgba(255, 255, 255, 0.85);
-  font-size: 12px;
-  line-height: 16px;
+  font-family: var(--font-family-base);
+  font-size: var(--typo-caption-size);
+  font-weight: var(--typo-caption-weight);
+  line-height: var(--typo-caption-line-height);
+  letter-spacing: var(--typo-caption-letter-spacing, normal);
 }

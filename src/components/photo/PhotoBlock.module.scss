@@ -33,8 +33,11 @@
   gap: 12px;
   align-items: start;
   color: var(--color-text-primary);
-  font-size: 12px;
-  font-weight: 500;
+  font-family: var(--font-family-base);
+  font-size: var(--typo-caption-size);
+  font-weight: var(--typo-caption-weight);
+  line-height: var(--typo-caption-line-height);
+  letter-spacing: var(--typo-caption-letter-spacing, normal);
 }
 
 .desc {

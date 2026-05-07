@@ -18,8 +18,11 @@
 .category {
   justify-self: start;
   color: #826b60;
-  font-size: 12px;
-  line-height: 16px;
+  font-family: var(--font-family-base);
+  font-size: var(--typo-caption-size);
+  font-weight: var(--typo-caption-weight);
+  line-height: var(--typo-caption-line-height);
+  letter-spacing: var(--typo-caption-letter-spacing, normal);
   background: #f6f1ee;
   border-radius: 2px;
   padding: 2px 8px;
