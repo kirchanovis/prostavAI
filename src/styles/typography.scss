@@ -62,6 +62,7 @@ $font-family-base:
     font-weight: var(--typo-news-caption-weight);
     font-style: var(--typo-news-caption-style);
     line-height: var(--typo-news-caption-line-height);
+    letter-spacing: var(--typo-news-caption-letter-spacing, normal);
   } @else if $preset == home-caption {
     font-size: var(--typo-home-caption-size);
     font-weight: var(--typo-home-caption-weight);
@@ -123,7 +124,8 @@ $font-family-base:
   --typo-news-caption-size: 16px;
   --typo-news-caption-weight: 400;
   --typo-news-caption-style: normal;
-  --typo-news-caption-line-height: 1.4;
+  --typo-news-caption-line-height: 24px;
+  --typo-news-caption-letter-spacing: 0.8px;
 
   /* 8) Home caption: Medium 12px */
   --typo-home-caption-size: 12px;

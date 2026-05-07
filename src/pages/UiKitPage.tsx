@@ -92,7 +92,14 @@ export function UiKitPage() {
           >
             Comment — 21 (semibold italic)
           </div>
-          <div style={{ fontSize: 'var(--typo-news-caption-size)', fontWeight: 'var(--typo-news-caption-weight)' }}>
+          <div
+            style={{
+              fontSize: 'var(--typo-news-caption-size)',
+              fontWeight: 'var(--typo-news-caption-weight)',
+              lineHeight: 'var(--typo-news-caption-line-height)',
+              letterSpacing: 'var(--typo-news-caption-letter-spacing)',
+            }}
+          >
             News caption — 16
           </div>
           <div style={{ fontSize: 'var(--typo-home-caption-size)', fontWeight: 'var(--typo-home-caption-weight)' }}>
