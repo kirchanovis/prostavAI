@@ -23,7 +23,16 @@ export function HomePage() {
       <NewsMasonryGrid
         items={news}
         renderItem={(item) => {
-          const onOpen = () => navigate(`/news/${item.id}`);
+          const to =
+            item.block === 'AdImageCard'
+              ? `/ads/${item.id}`
+              : item.block === 'NewsImageWideCard'
+                ? `/report/${item.id}`
+                : item.block === 'NewsImageCard'
+                  ? `/gallery/${item.id}`
+                  : `/news/${item.id}`;
+
+          const onOpen = () => navigate(to);
 
           switch (item.block) {
             case 'AdImageCard':
