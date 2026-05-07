@@ -15,7 +15,7 @@ export function DetailPage() {
         alt="Автопробег"
         description="Автопробег «Эх, путь-дорожка фронтовая» стартует от мемориала Вечный огонь"
         author="Пресс-служба"
-        showLogo
+        logoUrl="/src/assets/brand/logo-white.png"
       />
 
       <ArticleAuthorBlock

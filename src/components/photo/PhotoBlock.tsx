@@ -5,18 +5,18 @@ export function PhotoBlock({
   alt,
   description,
   author,
-  showLogo,
+  logoUrl,
 }: {
   src: string;
   alt: string;
   description?: string;
   author?: string;
-  showLogo?: boolean;
+  logoUrl?: string;
 }) {
   return (
     <div className={styles.block}>
       <div className={styles.wrap}>
-        {showLogo && <img className={styles.logo} src="/src/assets/brand/logo-white.png" alt="logo" />}
+        {logoUrl && <img className={styles.logo} src={logoUrl} alt="logo" />}
         <img className={styles.image} src={src} alt={alt} />
       </div>
 
