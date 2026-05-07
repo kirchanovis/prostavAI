@@ -109,7 +109,14 @@ export function UiKitPage() {
           >
             News caption — 16
           </div>
-          <div style={{ fontSize: 'var(--typo-home-caption-size)', fontWeight: 'var(--typo-home-caption-weight)' }}>
+          <div
+            style={{
+              fontSize: 'var(--typo-home-caption-size)',
+              fontWeight: 'var(--typo-home-caption-weight)',
+              lineHeight: 'var(--typo-home-caption-line-height)',
+              letterSpacing: 'var(--typo-home-caption-letter-spacing)',
+            }}
+          >
             Home caption — 12
           </div>
           <div

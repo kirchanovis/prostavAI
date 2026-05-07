@@ -69,6 +69,7 @@ $font-family-base:
     font-weight: var(--typo-home-caption-weight);
     font-style: var(--typo-home-caption-style);
     line-height: var(--typo-home-caption-line-height);
+    letter-spacing: var(--typo-home-caption-letter-spacing, normal);
   } @else if $preset == caption {
     font-size: var(--typo-caption-size);
     font-weight: var(--typo-caption-weight);
@@ -134,7 +135,8 @@ $font-family-base:
   --typo-home-caption-size: 12px;
   --typo-home-caption-weight: 500;
   --typo-home-caption-style: normal;
-  --typo-home-caption-line-height: 1.4;
+  --typo-home-caption-line-height: 24px;
+  --typo-home-caption-letter-spacing: 0.6px;
 
   /* 9) Small caption: Regular 12px */
   --typo-caption-size: 12px;
