@@ -9,7 +9,16 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,700;1,600&display=swap');
 
-$font-family-base: 'Fira Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+$font-family-base:
+  'Fira Sans',
+  system-ui,
+  -apple-system,
+  Segoe UI,
+  Roboto,
+  Arial,
+  'Noto Sans',
+  'Liberation Sans',
+  sans-serif;
 
 // Mixin to apply a typography preset via CSS variables
 // Usage: .myTitle { @include typo(h1); }
@@ -31,16 +40,19 @@ $font-family-base: 'Fira Sans', system-ui, -apple-system, Segoe UI, Roboto, Aria
     font-weight: var(--typo-h3-weight);
     font-style: var(--typo-h3-style);
     line-height: var(--typo-h3-line-height);
+    letter-spacing: var(--typo-h3-letter-spacing, normal);
   } @else if $preset == body {
     font-size: var(--typo-body-size);
     font-weight: var(--typo-body-weight);
     font-style: var(--typo-body-style);
     line-height: var(--typo-body-line-height);
+    letter-spacing: var(--typo-body-letter-spacing, normal);
   } @else if $preset == h4 {
     font-size: var(--typo-h4-size);
     font-weight: var(--typo-h4-weight);
     font-style: var(--typo-h4-style);
     line-height: var(--typo-h4-line-height);
+    letter-spacing: var(--typo-h4-letter-spacing, normal);
   } @else if $preset == comment {
     font-size: var(--typo-comment-size);
     font-weight: var(--typo-comment-weight);
@@ -51,16 +63,19 @@ $font-family-base: 'Fira Sans', system-ui, -apple-system, Segoe UI, Roboto, Aria
     font-weight: var(--typo-news-caption-weight);
     font-style: var(--typo-news-caption-style);
     line-height: var(--typo-news-caption-line-height);
+    letter-spacing: var(--typo-news-caption-letter-spacing, normal);
   } @else if $preset == home-caption {
     font-size: var(--typo-home-caption-size);
     font-weight: var(--typo-home-caption-weight);
     font-style: var(--typo-home-caption-style);
     line-height: var(--typo-home-caption-line-height);
+    letter-spacing: var(--typo-home-caption-letter-spacing, normal);
   } @else if $preset == caption {
     font-size: var(--typo-caption-size);
     font-weight: var(--typo-caption-weight);
     font-style: var(--typo-caption-style);
     line-height: var(--typo-caption-line-height);
+    letter-spacing: var(--typo-caption-letter-spacing, normal);
   } @else {
     @error "Unknown typography preset: #{$preset}";
   }
@@ -86,19 +101,22 @@ $font-family-base: 'Fira Sans', system-ui, -apple-system, Segoe UI, Roboto, Aria
   --typo-h3-size: 21px;
   --typo-h3-weight: 500;
   --typo-h3-style: normal;
-  --typo-h3-line-height: 1.3;
+  --typo-h3-line-height: 30px;
+  --typo-h3-letter-spacing: 1.05px;
 
   /* 4) Body: Regular 21px */
   --typo-body-size: 21px;
   --typo-body-weight: 400;
   --typo-body-style: normal;
-  --typo-body-line-height: 1.5;
+  --typo-body-line-height: 30px;
+  --typo-body-letter-spacing: 1.05px;
 
   /* 5) H4: Medium 16px */
   --typo-h4-size: 16px;
   --typo-h4-weight: 500;
   --typo-h4-style: normal;
-  --typo-h4-line-height: 1.3;
+  --typo-h4-line-height: 16px;
+  --typo-h4-letter-spacing: 0.8px;
 
   /* 6) Comment: Semibold Italic 21px */
   --typo-comment-size: 21px;
@@ -110,19 +128,22 @@ $font-family-base: 'Fira Sans', system-ui, -apple-system, Segoe UI, Roboto, Aria
   --typo-news-caption-size: 16px;
   --typo-news-caption-weight: 400;
   --typo-news-caption-style: normal;
-  --typo-news-caption-line-height: 1.4;
+  --typo-news-caption-line-height: 24px;
+  --typo-news-caption-letter-spacing: 0.8px;
 
   /* 8) Home caption: Medium 12px */
   --typo-home-caption-size: 12px;
   --typo-home-caption-weight: 500;
   --typo-home-caption-style: normal;
-  --typo-home-caption-line-height: 1.4;
+  --typo-home-caption-line-height: 24px;
+  --typo-home-caption-letter-spacing: 0.6px;
 
   /* 9) Small caption: Regular 12px */
   --typo-caption-size: 12px;
   --typo-caption-weight: 400;
   --typo-caption-style: normal;
-  --typo-caption-line-height: 1.4;
+  --typo-caption-line-height: 0px;
+  --typo-caption-letter-spacing: 0.6px;
 }
 
 html,

@@ -60,11 +60,36 @@ export function UiKitPage() {
         <Space direction="vertical" size={8} style={{ width: '100%' }}>
           <div style={{ fontSize: 'var(--typo-h1-size)', fontWeight: 'var(--typo-h1-weight)' }}>H1 — 42</div>
           <div style={{ fontSize: 'var(--typo-h2-size)', fontWeight: 'var(--typo-h2-weight)' }}>H2 — 24</div>
-          <div style={{ fontSize: 'var(--typo-h3-size)', fontWeight: 'var(--typo-h3-weight)' }}>H3 — 21</div>
-          <div style={{ fontSize: 'var(--typo-body-size)', fontWeight: 'var(--typo-body-weight)' }}>
+          <div
+            style={{
+              fontSize: 'var(--typo-h3-size)',
+              fontWeight: 'var(--typo-h3-weight)',
+              lineHeight: 'var(--typo-h3-line-height)',
+              letterSpacing: 'var(--typo-h3-letter-spacing)',
+            }}
+          >
+            H3 — 21
+          </div>
+          <div
+            style={{
+              fontSize: 'var(--typo-body-size)',
+              fontWeight: 'var(--typo-body-weight)',
+              lineHeight: 'var(--typo-body-line-height)',
+              letterSpacing: 'var(--typo-body-letter-spacing)',
+            }}
+          >
             Body — 21: обычный текст
           </div>
-          <div style={{ fontSize: 'var(--typo-h4-size)', fontWeight: 'var(--typo-h4-weight)' }}>H4 — 16</div>
+          <div
+            style={{
+              fontSize: 'var(--typo-h4-size)',
+              fontWeight: 'var(--typo-h4-weight)',
+              lineHeight: 'var(--typo-h4-line-height)',
+              letterSpacing: 'var(--typo-h4-letter-spacing)',
+            }}
+          >
+            H4 — 16
+          </div>
           <div
             style={{
               fontSize: 'var(--typo-comment-size)',
@@ -74,13 +99,34 @@ export function UiKitPage() {
           >
             Comment — 21 (semibold italic)
           </div>
-          <div style={{ fontSize: 'var(--typo-news-caption-size)', fontWeight: 'var(--typo-news-caption-weight)' }}>
+          <div
+            style={{
+              fontSize: 'var(--typo-news-caption-size)',
+              fontWeight: 'var(--typo-news-caption-weight)',
+              lineHeight: 'var(--typo-news-caption-line-height)',
+              letterSpacing: 'var(--typo-news-caption-letter-spacing)',
+            }}
+          >
             News caption — 16
           </div>
-          <div style={{ fontSize: 'var(--typo-home-caption-size)', fontWeight: 'var(--typo-home-caption-weight)' }}>
+          <div
+            style={{
+              fontSize: 'var(--typo-home-caption-size)',
+              fontWeight: 'var(--typo-home-caption-weight)',
+              lineHeight: 'var(--typo-home-caption-line-height)',
+              letterSpacing: 'var(--typo-home-caption-letter-spacing)',
+            }}
+          >
             Home caption — 12
           </div>
-          <div style={{ fontSize: 'var(--typo-caption-size)', fontWeight: 'var(--typo-caption-weight)' }}>
+          <div
+            style={{
+              fontSize: 'var(--typo-caption-size)',
+              fontWeight: 'var(--typo-caption-weight)',
+              lineHeight: 'var(--typo-caption-line-height)',
+              letterSpacing: 'var(--typo-caption-letter-spacing)',
+            }}
+          >
             Caption — 12
           </div>
         </Space>
