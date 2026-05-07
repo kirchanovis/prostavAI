@@ -41,6 +41,10 @@ export function DetailPage() {
         <PhotoBlock src="/src/assets/photos/AqI6FFiBDNE.jpg" alt="Поляны" />
 
         <h3 className={styles.h3}>На поляне есть памятник авиаторам. Надпись на нем гласит: "Небо забирает лучших"</h3>
+
+        <SocialBlock stats={{ comments: commentsMockData.length, likes: 18, views: 860 }} />
+
+        <CommentsBlock items={commentsMockData} />
       </div>
     );
   }
