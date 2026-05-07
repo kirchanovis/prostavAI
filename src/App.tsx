@@ -4,9 +4,9 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { SiteHeader } from './components/header/SiteHeader';
 import { ArticlesPage } from './pages/ArticlesPage';
-import { DetailPage } from './pages/DetailPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { HomePage } from './pages/HomePage';
+import { NewsPage } from './pages/NewsPage';
 import { ReportPage } from './pages/ReportPage';
 import { StubPage } from './pages/StubPage';
 import { UiKitPage } from './pages/UiKitPage';
@@ -31,7 +31,7 @@ export default function App() {
           <Route path="/photo-reports" element={<StubPage title="Фоторепортажи" />} />
           <Route path="/history" element={<StubPage title="История Ставрополья" />} />
           <Route path="/ui" element={<UiKitPage />} />
-          <Route path="/news/:id" element={<DetailPage />} />
+          <Route path="/news/:id" element={<NewsPage />} />
           <Route path="/detail/:id" element={<Navigate to="/news/:id" replace />} />
           <Route path="/gallery/:id" element={<GalleryPage />} />
           <Route path="/report/:id" element={<ReportPage />} />

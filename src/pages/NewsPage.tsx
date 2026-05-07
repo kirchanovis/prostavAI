@@ -1,13 +1,13 @@
 import { useParams } from 'react-router-dom';
 
-import styles from './DetailPage.module.scss';
+import styles from './NewsPage.module.scss';
 import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
 import { PhotoBlock } from '../components/photo/PhotoBlock';
 import { SocialBlock } from '../components/social/SocialBlock';
 import { commentsMockData } from '../mocks/comments';
 
-export function DetailPage() {
+export function NewsPage() {
   const { id } = useParams();
 
   if (id === '2') {
