@@ -70,7 +70,14 @@ export function UiKitPage() {
           >
             H3 — 21
           </div>
-          <div style={{ fontSize: 'var(--typo-body-size)', fontWeight: 'var(--typo-body-weight)' }}>
+          <div
+            style={{
+              fontSize: 'var(--typo-body-size)',
+              fontWeight: 'var(--typo-body-weight)',
+              lineHeight: 'var(--typo-body-line-height)',
+              letterSpacing: 'var(--typo-body-letter-spacing)',
+            }}
+          >
             Body — 21: обычный текст
           </div>
           <div
