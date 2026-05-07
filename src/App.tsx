@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 import './App.css';
 import { SiteHeader } from './components/header/SiteHeader';
+import { AdsPage } from './pages/AdsPage';
 import { ArticlesPage } from './pages/ArticlesPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { HomePage } from './pages/HomePage';
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/detail/:id" element={<Navigate to="/news/:id" replace />} />
           <Route path="/gallery/:id" element={<GalleryPage />} />
           <Route path="/report/:id" element={<ReportPage />} />
+          <Route path="/ads/:id" element={<AdsPage />} />
           <Route path="*" element={<StubPage title="404" />} />
         </Routes>
       </Content>
