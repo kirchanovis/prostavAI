@@ -112,7 +112,14 @@ export function UiKitPage() {
           <div style={{ fontSize: 'var(--typo-home-caption-size)', fontWeight: 'var(--typo-home-caption-weight)' }}>
             Home caption — 12
           </div>
-          <div style={{ fontSize: 'var(--typo-caption-size)', fontWeight: 'var(--typo-caption-weight)' }}>
+          <div
+            style={{
+              fontSize: 'var(--typo-caption-size)',
+              fontWeight: 'var(--typo-caption-weight)',
+              lineHeight: 'var(--typo-caption-line-height)',
+              letterSpacing: 'var(--typo-caption-letter-spacing)',
+            }}
+          >
             Caption — 12
           </div>
         </Space>

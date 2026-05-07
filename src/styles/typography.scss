@@ -74,6 +74,7 @@ $font-family-base:
     font-weight: var(--typo-caption-weight);
     font-style: var(--typo-caption-style);
     line-height: var(--typo-caption-line-height);
+    letter-spacing: var(--typo-caption-letter-spacing, normal);
   } @else {
     @error "Unknown typography preset: #{$preset}";
   }
@@ -139,7 +140,8 @@ $font-family-base:
   --typo-caption-size: 12px;
   --typo-caption-weight: 400;
   --typo-caption-style: normal;
-  --typo-caption-line-height: 1.4;
+  --typo-caption-line-height: 0px;
+  --typo-caption-letter-spacing: 0.6px;
 }
 
 html,
