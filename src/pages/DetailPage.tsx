@@ -1,3 +1,5 @@
+import { useParams } from 'react-router-dom';
+
 import styles from './DetailPage.module.scss';
 import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
@@ -6,6 +8,44 @@ import { SocialBlock } from '../components/social/SocialBlock';
 import { commentsMockData } from '../mocks/comments';
 
 export function DetailPage() {
+  const { id } = useParams();
+
+  if (id === '2') {
+    return (
+      <div className={styles.wrap}>
+        <h1 className={styles.h1}>Как нескучно провести майские праздники</h1>
+
+        <PhotoBlock
+          src="/src/assets/photos/IMG_1817.png"
+          alt="Майские праздники"
+          logoUrl="/src/assets/brand/logo-white.png"
+        />
+
+        <ArticleAuthorBlock
+          authorName="Спорт мастер"
+          authorAvatarUrl="/src/assets/brand/sportmaster.png"
+          publishedAt="2022-05-02T09:00:00.000Z"
+        />
+
+        <h3 className={styles.h3}>
+          В окрестностях Ставрополя есть прекрасное место, о котором многие слышали, но не все были. Мы в месте с
+          командой «Спорт мастера» решили отправится в путь на велосипедах
+        </h3>
+
+        <PhotoBlock src="/src/assets/photos/IMG_1936.png" alt="Велопрогулка" />
+
+        <h3 className={styles.h3}>
+          Поляны также весьма популярны у велосипедистов. Вообще, Беспутка расположена в 5 км от Ставрополя.
+        </h3>
+
+        <PhotoBlock src="/src/assets/photos/AqI6FFiBDNE.jpg" alt="Поляны" />
+
+        <h3 className={styles.h3}>На поляне есть памятник авиаторам. Надпись на нем гласит: "Небо забирает лучших"</h3>
+      </div>
+    );
+  }
+
+  // Default: detail/1
   return (
     <div className={styles.wrap}>
       <h1 className={styles.h1}>16 апреля стартует краевой автопробег «Эх, путь-дорожка фронтовая» от Вечного огня</h1>
