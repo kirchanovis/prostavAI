@@ -1,5 +1,5 @@
 import { Layout } from 'antd';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import './App.css';
 import { SiteHeader } from './components/header/SiteHeader';
@@ -29,7 +29,8 @@ export default function App() {
           <Route path="/photo-reports" element={<StubPage title="Фоторепортажи" />} />
           <Route path="/history" element={<StubPage title="История Ставрополья" />} />
           <Route path="/ui" element={<UiKitPage />} />
-          <Route path="/detail/:id" element={<DetailPage />} />
+          <Route path="/news/:id" element={<DetailPage />} />
+          <Route path="/detail/:id" element={<Navigate to="/news/:id" replace />} />
           <Route path="*" element={<StubPage title="404" />} />
         </Routes>
       </Content>
