@@ -73,7 +73,16 @@ export function UiKitPage() {
           <div style={{ fontSize: 'var(--typo-body-size)', fontWeight: 'var(--typo-body-weight)' }}>
             Body — 21: обычный текст
           </div>
-          <div style={{ fontSize: 'var(--typo-h4-size)', fontWeight: 'var(--typo-h4-weight)' }}>H4 — 16</div>
+          <div
+            style={{
+              fontSize: 'var(--typo-h4-size)',
+              fontWeight: 'var(--typo-h4-weight)',
+              lineHeight: 'var(--typo-h4-line-height)',
+              letterSpacing: 'var(--typo-h4-letter-spacing)',
+            }}
+          >
+            H4 — 16
+          </div>
           <div
             style={{
               fontSize: 'var(--typo-comment-size)',
