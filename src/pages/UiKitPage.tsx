@@ -257,7 +257,7 @@ export function UiKitPage() {
       </Card>
 
       <Card title="PhotoBlock" style={{ width: '100%' }}>
-        <PhotoBlock src="/src/assets/photos/IMG_2530.png" alt="Demo photo" />
+        <PhotoBlock src="/src/assets/photos/IMG_2530.png" alt="Demo photo" showLogo />
       </Card>
 
       <Card title="OnSceneReportCard" style={{ width: '100%' }}>
