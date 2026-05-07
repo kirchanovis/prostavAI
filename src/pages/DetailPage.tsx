@@ -3,12 +3,9 @@ import { useParams } from 'react-router-dom';
 import styles from './DetailPage.module.scss';
 import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
-import { PhotoGallery } from '../components/gallery/PhotoGallery';
 import { PhotoBlock } from '../components/photo/PhotoBlock';
-import { OnSceneReportCard } from '../components/report/OnSceneReportCard';
 import { SocialBlock } from '../components/social/SocialBlock';
 import { commentsMockData } from '../mocks/comments';
-import { photosData } from '../mocks/photos';
 
 export function DetailPage() {
   const { id } = useParams();
@@ -46,78 +43,6 @@ export function DetailPage() {
         <p className={styles.body}>На поляне есть памятник авиаторам. Надпись на нем гласит: "Небо забирает лучших"</p>
 
         <SocialBlock stats={{ comments: commentsMockData.length, likes: 18, views: 860 }} />
-
-        <div className={styles.center}>
-          <div className={styles.centerInner}>
-            <CommentsBlock items={commentsMockData} />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (id === '3') {
-    return (
-      <div className={styles.wrap}>
-        <h1 className={styles.h1}>Репортажи с места событий</h1>
-
-        <OnSceneReportCard
-          timeLabel="10 минут назад"
-          title="На проспекте перекрыли движение: что известно"
-          media={{ type: 'image', src: '/src/assets/photos/IMG_2244.png', alt: 'Сцена' }}
-        />
-
-        <OnSceneReportCard
-          timeLabel="35 минут назад"
-          title="Очевидцы публикуют видео: ситуация развивается"
-          media={{ type: 'youtube', videoId: 'k_TqWxnGbL4', title: 'YouTube' }}
-        />
-
-        <OnSceneReportCard
-          timeLabel="1 час назад"
-          title="Коммунальные службы приступили к работам"
-          media={{ type: 'image', src: '/src/assets/photos/IMG_2608.png', alt: 'Работы' }}
-        />
-
-        <OnSceneReportCard
-          timeLabel="2 часа назад"
-          title="Заявление пресс-службы: комментарий официальных лиц"
-          media={{ type: 'image', src: '/src/assets/photos/IMG_1817.png', alt: 'Комментарий' }}
-        />
-
-        <OnSceneReportCard timeLabel="3 часа назад" title="Обновление: подробности уточняются (без медиа)" />
-
-        <OnSceneReportCard
-          timeLabel="Сегодня"
-          title="Фотоподборка: хроника событий"
-          media={{ type: 'image', src: '/src/assets/photos/den-goroda-stavropol-5.jpg', alt: 'Хроника' }}
-        />
-
-        <SocialBlock stats={{ comments: commentsMockData.length, likes: 28, views: 1040 }} />
-
-        <div className={styles.center}>
-          <div className={styles.centerInner}>
-            <CommentsBlock items={commentsMockData} />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (id === '4') {
-    return (
-      <div className={styles.wrap}>
-        <h1 className={styles.h1}>Российская студенческая весна 2018 Первый день</h1>
-
-        <ArticleAuthorBlock
-          authorName="Редакция"
-          authorAvatarUrl="https://i.pravatar.cc/80?img=8"
-          publishedAt="2018-05-15T09:00:00.000Z"
-        />
-
-        <PhotoGallery items={photosData} />
-
-        <SocialBlock stats={{ comments: commentsMockData.length, likes: 34, views: 1520 }} />
 
         <div className={styles.center}>
           <div className={styles.centerInner}>
