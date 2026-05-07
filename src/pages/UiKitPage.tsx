@@ -60,7 +60,16 @@ export function UiKitPage() {
         <Space direction="vertical" size={8} style={{ width: '100%' }}>
           <div style={{ fontSize: 'var(--typo-h1-size)', fontWeight: 'var(--typo-h1-weight)' }}>H1 — 42</div>
           <div style={{ fontSize: 'var(--typo-h2-size)', fontWeight: 'var(--typo-h2-weight)' }}>H2 — 24</div>
-          <div style={{ fontSize: 'var(--typo-h3-size)', fontWeight: 'var(--typo-h3-weight)' }}>H3 — 21</div>
+          <div
+            style={{
+              fontSize: 'var(--typo-h3-size)',
+              fontWeight: 'var(--typo-h3-weight)',
+              lineHeight: 'var(--typo-h3-line-height)',
+              letterSpacing: 'var(--typo-h3-letter-spacing)',
+            }}
+          >
+            H3 — 21
+          </div>
           <div style={{ fontSize: 'var(--typo-body-size)', fontWeight: 'var(--typo-body-weight)' }}>
             Body — 21: обычный текст
           </div>
