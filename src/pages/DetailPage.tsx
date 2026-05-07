@@ -46,7 +46,11 @@ export function DetailPage() {
 
         <SocialBlock stats={{ comments: commentsMockData.length, likes: 18, views: 860 }} />
 
-        <CommentsBlock items={commentsMockData} />
+        <div className={styles.center}>
+          <div className={styles.centerInner}>
+            <CommentsBlock items={commentsMockData} />
+          </div>
+        </div>
       </div>
     );
   }
@@ -89,7 +93,11 @@ export function DetailPage() {
 
       <SocialBlock stats={{ comments: commentsMockData.length, likes: 12, views: 420 }} />
 
-      <CommentsBlock items={commentsMockData} />
+      <div className={styles.center}>
+        <div className={styles.centerInner}>
+          <CommentsBlock items={commentsMockData} />
+        </div>
+      </div>
     </div>
   );
 }

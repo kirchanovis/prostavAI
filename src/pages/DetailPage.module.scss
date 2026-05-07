@@ -26,3 +26,14 @@
   margin: 0;
   color: var(--color-text-primary);
 }
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.centerInner {
+  width: 100%;
+  max-width: 700px;
+}
