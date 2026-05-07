@@ -1,5 +1,6 @@
 import { Space } from 'antd';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { AdImageCard } from '../components/news/AdImageCard';
 import { NewsCard } from '../components/news/NewsCard';
@@ -10,6 +11,7 @@ import { NewsVideoCard } from '../components/news/NewsVideoCard';
 import newsApi, { type NewsItem } from '../mocks/newsApi';
 
 export function HomePage() {
+  const navigate = useNavigate();
   const [news, setNews] = useState<NewsItem[]>([]);
 
   useEffect(() => {
@@ -21,44 +23,60 @@ export function HomePage() {
       <NewsMasonryGrid
         items={news}
         renderItem={(item) => {
+          const onOpen = () => navigate(`/news/${item.id}`);
+
           switch (item.block) {
             case 'AdImageCard':
-              return <AdImageCard title={item.title} publishedAt={item.date} imageUrl={item.image} />;
+              return (
+                <div role="button" tabIndex={0} onClick={onOpen} onKeyDown={(e) => e.key === 'Enter' && onOpen()}>
+                  <AdImageCard title={item.title} publishedAt={item.date} imageUrl={item.image} />
+                </div>
+              );
 
             case 'NewsImageCard':
               return (
-                <NewsImageCard
-                  category={item.category}
-                  title={item.title}
-                  publishedAt={item.date}
-                  imageUrl={item.image}
-                />
+                <div role="button" tabIndex={0} onClick={onOpen} onKeyDown={(e) => e.key === 'Enter' && onOpen()}>
+                  <NewsImageCard
+                    category={item.category}
+                    title={item.title}
+                    publishedAt={item.date}
+                    imageUrl={item.image}
+                  />
+                </div>
               );
 
             case 'NewsImageWideCard':
               return (
-                <NewsImageWideCard
-                  category={item.category}
-                  title={item.title}
-                  publishedAt={item.date}
-                  imageUrl={item.image}
-                />
+                <div role="button" tabIndex={0} onClick={onOpen} onKeyDown={(e) => e.key === 'Enter' && onOpen()}>
+                  <NewsImageWideCard
+                    category={item.category}
+                    title={item.title}
+                    publishedAt={item.date}
+                    imageUrl={item.image}
+                  />
+                </div>
               );
 
             case 'NewsVideoCard':
               return (
-                <NewsVideoCard
-                  category={item.category}
-                  title={item.title}
-                  subtitle={item.videoUrl ? 'Видео' : (item.description ?? '')}
-                  publishedAt={item.date}
-                  imageUrl={item.image}
-                />
+                <div role="button" tabIndex={0} onClick={onOpen} onKeyDown={(e) => e.key === 'Enter' && onOpen()}>
+                  <NewsVideoCard
+                    category={item.category}
+                    title={item.title}
+                    subtitle={item.videoUrl ? 'Видео' : (item.description ?? '')}
+                    publishedAt={item.date}
+                    imageUrl={item.image}
+                  />
+                </div>
               );
 
             case 'NewsCard':
             default:
-              return <NewsCard category={item.category} title={item.title} publishedAt={item.date} />;
+              return (
+                <div role="button" tabIndex={0} onClick={onOpen} onKeyDown={(e) => e.key === 'Enter' && onOpen()}>
+                  <NewsCard category={item.category} title={item.title} publishedAt={item.date} />
+                </div>
+              );
           }
         }}
       />
