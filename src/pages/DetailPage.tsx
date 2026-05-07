@@ -92,6 +92,14 @@ export function DetailPage() {
           title="Фотоподборка: хроника событий"
           media={{ type: 'image', src: '/src/assets/photos/den-goroda-stavropol-5.jpg', alt: 'Хроника' }}
         />
+
+        <SocialBlock stats={{ comments: commentsMockData.length, likes: 28, views: 1040 }} />
+
+        <div className={styles.center}>
+          <div className={styles.centerInner}>
+            <CommentsBlock items={commentsMockData} />
+          </div>
+        </div>
       </div>
     );
   }
