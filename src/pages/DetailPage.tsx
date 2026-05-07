@@ -83,6 +83,8 @@ export function DetailPage() {
           media={{ type: 'image', src: '/src/assets/photos/IMG_1817.png', alt: 'Комментарий' }}
         />
 
+        <OnSceneReportCard timeLabel="3 часа назад" title="Обновление: подробности уточняются (без медиа)" />
+
         <OnSceneReportCard
           timeLabel="Сегодня"
           title="Фотоподборка: хроника событий"
