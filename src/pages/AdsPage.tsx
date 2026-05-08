@@ -18,7 +18,7 @@ export function AdsPage() {
   useEffect(() => {
     if (!Number.isFinite(numericId)) return;
 
-    newsApi.getNewsDetailById(1, ({ items }) => {
+    newsApi.getNewsDetailById(2, ({ items }) => {
       setDetail(items[0] ?? null);
     });
   }, [numericId]);
