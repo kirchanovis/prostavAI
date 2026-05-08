@@ -1,3 +1,4 @@
+/* TODO(full-width): make gallery stretch to full viewport width on GalleryPage */
 .gallery {
   width: 100%;
   background: var(--color-bg);
@@ -12,7 +13,6 @@
   color: var(--color-text-caption);
 }
 .mainPhoto {
-  width: 65%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -90,6 +90,7 @@
   gap: 10px;
   overflow-x: auto;
   padding-bottom: 6px;
+  margin: 0 auto;
 }
 
 .min-photo__item,

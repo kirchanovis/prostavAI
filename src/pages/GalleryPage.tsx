@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+import pageStyles from './GalleryPage.module.scss';
 import styles from './NewsPage.module.scss';
 import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
@@ -35,7 +36,9 @@ export function GalleryPage() {
         publishedAt={detail.date}
       />
 
-      <PhotoGallery items={detail.photos as unknown as Parameters<typeof PhotoGallery>[0]['items']} />
+      <div className={pageStyles.fullBleed}>
+        <PhotoGallery items={detail.photos as unknown as Parameters<typeof PhotoGallery>[0]['items']} />
+      </div>
 
       <SocialBlock
         stats={{
