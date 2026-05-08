@@ -43,7 +43,7 @@ export function AdsPage() {
         publishedAt={detail.date}
       />
 
-      {detail.description ? <p className={styles.body}>{detail.description}</p> : null}
+      {detail.description ? <h3 className={styles.h3}>{detail.description}</h3> : null}
 
       {detail.content.map((b, idx) => {
         if (b.type === 'h3')
