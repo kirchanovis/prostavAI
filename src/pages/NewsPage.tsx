@@ -18,7 +18,7 @@ export function NewsPage() {
   useEffect(() => {
     if (!Number.isFinite(numericId)) return;
 
-    newsApi.getNewsDetailById(numericId, ({ items }) => {
+    newsApi.getNewsDetailById(1, ({ items }) => {
       setDetail(items[0] ?? null);
     });
   }, [numericId]);
