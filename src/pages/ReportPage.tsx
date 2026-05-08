@@ -17,7 +17,7 @@ export function ReportPage() {
   useEffect(() => {
     if (!Number.isFinite(numericId)) return;
 
-    reportApi.getReportById(numericId, ({ items }) => {
+    reportApi.getReportById(1, ({ items }) => {
       setDetail(items[0] ?? null);
     });
   }, [numericId]);
