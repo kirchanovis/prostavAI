@@ -10,12 +10,13 @@
 .link {
   background: transparent;
   border: none;
-  padding: 6px 0;
   cursor: pointer;
   color: #b9a89f;
+  font-family: var(--font-family-base);
   font-size: var(--typo-caption-size);
   font-weight: var(--typo-caption-weight);
-  line-height: 16px;
+  line-height: var(--typo-caption-line-height);
+  letter-spacing: var(--typo-caption-letter-spacing, normal);
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -42,6 +43,9 @@
 
 .linkActive {
   color: var(--color-primary);
-  font-weight: 600;
+  font-size: var(--typo-home-caption-size);
+  font-weight: var(--typo-home-caption-weight);
+  line-height: var(--typo-home-caption-line-height);
+  letter-spacing: var(--typo-home-caption-letter-spacing, normal);
   border-bottom: 1px solid var(--color-primary);
 }
