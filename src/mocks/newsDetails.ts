@@ -22,12 +22,11 @@ export const newsDetailsMockData: NewsDetailItem[] = [
     description:
       '4 района и округа, более 100 населенных пунктов Ставропольского края посетят участники автопробега «Эх, путь-дорожка фронтовая».',
     date: '2022-04-16T09:00:00.000Z',
-    authorName: 'Администрация Ставрополя',
+    authorName: 'Антон Петров',
     authorAvatarUrl: 'https://i.pravatar.cc/80?img=5',
     image: {
       src: '/src/assets/photos/den-goroda-stavropol-5.jpg',
       alt: 'Автопробег',
-      logoUrl: '/src/assets/brand/logo-white.png',
     },
     stats: { views: 420, likes: 12, comments: 3 },
     content: [

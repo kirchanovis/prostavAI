@@ -18,7 +18,7 @@ export function GalleryPage() {
   useEffect(() => {
     if (!Number.isFinite(numericId)) return;
 
-    galleryApi.getGalleryById(numericId, ({ items }) => {
+    galleryApi.getGalleryById(1, ({ items }) => {
       setDetail(items[0] ?? null);
     });
   }, [numericId]);
