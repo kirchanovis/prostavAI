@@ -1,4 +1,4 @@
-import { Button, Card, Divider, Radio, Space, Typography } from 'antd';
+import { Card, Divider, Radio, Space, Typography } from 'antd';
 import { useMemo, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -209,8 +209,6 @@ export function UiKitPage() {
             <Radio.Button value="with">С подписью</Radio.Button>
             <Radio.Button value="without">Без подписи</Radio.Button>
           </Radio.Group>
-
-          <Button onClick={() => setPhotoCaptionMode((m) => (m === 'with' ? 'without' : 'with'))}>Переключить</Button>
 
           <PhotoBlock
             src="/src/assets/photos/den-goroda-stavropol-5.jpg"
