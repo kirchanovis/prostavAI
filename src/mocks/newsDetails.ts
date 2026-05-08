@@ -10,7 +10,7 @@ export type NewsDetailItem = {
   date: string;
   authorName: string;
   authorAvatarUrl: string;
-  image: { src: string; alt?: string; logoUrl?: string };
+  image: { src: string; alt?: string; logoUrl?: string; description?: string; author?: string };
   stats?: { views?: number; likes?: number; comments?: number };
   content: NewsDetailBlock[];
 };
@@ -27,6 +27,8 @@ export const newsDetailsMockData: NewsDetailItem[] = [
     image: {
       src: '/src/assets/photos/den-goroda-stavropol-5.jpg',
       alt: 'Автопробег',
+      description: 'Открытие автопробега у Вечного огня',
+      author: 'Антон Петров',
     },
     stats: { views: 420, likes: 12, comments: 3 },
     content: [
@@ -52,6 +54,8 @@ export const newsDetailsMockData: NewsDetailItem[] = [
       src: '/src/assets/ads/fatbike-ad-01.jpg',
       alt: 'Майские праздники',
       logoUrl: '/src/assets/brand/logo-white.png',
+      description: 'Горный велосипед на фоне весеннего леса',
+      author: 'Спорт мастер',
     },
     stats: { views: 860, likes: 18, comments: 3 },
     content: [
