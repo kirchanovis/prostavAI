@@ -47,6 +47,7 @@
 }
 
 .right {
+  height: 194px;
   padding: 14px;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -95,6 +96,7 @@
   line-height: var(--typo-caption-line-height);
   letter-spacing: var(--typo-caption-letter-spacing, normal);
   color: var(--color-text-caption);
+  padding: 10px 0;
 }
 
 .meta {
