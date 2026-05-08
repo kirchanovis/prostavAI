@@ -23,14 +23,16 @@
 
 .time {
   color: var(--color-text-muted);
-  font-size: var(--typo-caption-size);
-  font-weight: var(--typo-caption-weight);
-  line-height: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.6px;
 }
 
 .title {
   color: var(--color-text-primary);
-  font-size: var(--typo-body-size);
-  font-weight: var(--typo-body-weight);
-  line-height: 1.35;
+  font-size: var(--typo-h3-size);
+  font-weight: var(--typo-h3-weight);
+  line-height: var(--typo-h3-line-height);
+  letter-spacing: var(--typo-h3-letter-spacing, normal);
 }
