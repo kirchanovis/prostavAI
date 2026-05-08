@@ -1,6 +1,6 @@
-import { Card, Divider, Radio, Space, Typography } from 'antd';
-import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Button, Card, Divider, Radio, Space, Typography } from 'antd';
+import { useMemo, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { ArticleAuthorBlock } from '../components/article/ArticleAuthorBlock';
 import { CommentsBlock } from '../components/comments/CommentsBlock';
@@ -44,7 +44,17 @@ const demoTopNewsTitles: string[] = [
 export function UiKitPage() {
   const location = useLocation();
   const [onSceneMediaMode, setOnSceneMediaMode] = useState<'none' | 'photo' | 'video' | 'youtube'>('none');
-  useNavigate();
+
+  const [photoCaptionMode, setPhotoCaptionMode] = useState<'with' | 'without'>('with');
+  const demoPhotoMeta = useMemo(
+    () =>
+      ({
+        description: 'Подпись под фото: пример текста',
+        author: 'Антон Петров',
+      }) as const,
+    [],
+  );
+
   return (
     <Space direction="vertical" size={16} style={{ width: '100%' }}>
       <Typography.Title level={4} style={{ margin: 0 }}>
@@ -186,6 +196,30 @@ export function UiKitPage() {
 
       <Card title="PhotoGallery" style={{ width: '100%' }}>
         <PhotoGallery items={photosData} />
+      </Card>
+
+      <Card title="PhotoBlock (caption toggle)" style={{ width: '100%' }}>
+        <Space direction="vertical" size={12} style={{ width: '100%' }}>
+          <Radio.Group
+            value={photoCaptionMode}
+            onChange={(e) => setPhotoCaptionMode(e.target.value)}
+            optionType="button"
+            buttonStyle="solid"
+          >
+            <Radio.Button value="with">С подписью</Radio.Button>
+            <Radio.Button value="without">Без подписи</Radio.Button>
+          </Radio.Group>
+
+          <Button onClick={() => setPhotoCaptionMode((m) => (m === 'with' ? 'without' : 'with'))}>Переключить</Button>
+
+          <PhotoBlock
+            src="/src/assets/photos/den-goroda-stavropol-5.jpg"
+            alt="demo"
+            description={photoCaptionMode === 'with' ? demoPhotoMeta.description : undefined}
+            author={photoCaptionMode === 'with' ? demoPhotoMeta.author : undefined}
+            logoUrl="/src/assets/brand/logo-white.png"
+          />
+        </Space>
       </Card>
 
       <Card title="Comments (for gallery)" style={{ width: '100%' }}>
