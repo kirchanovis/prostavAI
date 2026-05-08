@@ -200,14 +200,9 @@ export function UiKitPage() {
 
       <Card title="PhotoBlock (caption toggle)" style={{ width: '100%' }}>
         <Space direction="vertical" size={12} style={{ width: '100%' }}>
-          <Radio.Group
-            value={photoCaptionMode}
-            onChange={(e) => setPhotoCaptionMode(e.target.value)}
-            optionType="button"
-            buttonStyle="solid"
-          >
-            <Radio.Button value="with">С подписью</Radio.Button>
-            <Radio.Button value="without">Без подписи</Radio.Button>
+          <Radio.Group value={photoCaptionMode} onChange={(e) => setPhotoCaptionMode(e.target.value)}>
+            <Radio value="with">С подписью</Radio>
+            <Radio value="without">Без подписи</Radio>
           </Radio.Group>
 
           <PhotoBlock
