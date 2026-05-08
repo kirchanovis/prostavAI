@@ -74,7 +74,6 @@
 .main-photo__author,
 .mainPhotoAuthor {
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
   text-align: right;
   color: var(--color-text-caption);
@@ -82,7 +81,6 @@
 
 .main-photo__desc,
 .mainPhotoDesc {
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 
