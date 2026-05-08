@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import styles from './NewsPage.module.scss';
-
 import { CommentsBlock } from '../components/comments/CommentsBlock';
 import { OnSceneReportCard } from '../components/report/OnSceneReportCard';
 import { SocialBlock } from '../components/social/SocialBlock';
