@@ -29,7 +29,13 @@ export function AdsPage() {
     <div className={styles.wrap}>
       <h1 className={styles.h1}>{detail.title}</h1>
 
-      <PhotoBlock src={detail.image.src} alt={detail.image.alt ?? detail.title} logoUrl={detail.image.logoUrl} />
+      <PhotoBlock
+        src={detail.image.src}
+        alt={detail.image.alt ?? detail.title}
+        logoUrl={detail.image.logoUrl}
+        description={detail.image.description}
+        author={detail.image.author}
+      />
 
       <ArticleAuthorBlock
         authorName={detail.authorName}

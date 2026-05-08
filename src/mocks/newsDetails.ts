@@ -68,7 +68,6 @@ export const newsDetailsMockData: NewsDetailItem[] = [
       { type: 'p', text: 'На поляне есть памятник авиаторам. Надпись на нем гласит: «Небо забирает лучших».' },
       { type: 'photo', src: '/src/assets/ads/ad-600-02.jpg', alt: 'Реклама 600 (2)' },
       { type: 'p', text: 'Ещё один кадр из поездки — и небольшой рекламный блок для теста отображения.' },
-      { type: 'photo', src: '/src/assets/ads/ad-image-01.jpg', alt: 'Реклама' },
     ],
   },
 ];
