@@ -13,9 +13,11 @@
   padding: 6px 0;
   cursor: pointer;
   color: #b9a89f;
-  font-size: var(--typo-caption-size);
-  font-weight: var(--typo-caption-weight);
-  line-height: 16px;
+  font-family: var(--font-family-base);
+  font-size: var(--typo-home-caption-size);
+  font-weight: var(--typo-home-caption-weight);
+  line-height: var(--typo-home-caption-line-height);
+  letter-spacing: var(--typo-home-caption-letter-spacing, normal);
   display: inline-flex;
   align-items: center;
   gap: 6px;
