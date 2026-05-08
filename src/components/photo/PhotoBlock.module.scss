@@ -1,5 +1,6 @@
 .block {
   width: 100%;
+  max-width: 768px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -51,14 +52,13 @@
 }
 
 .desc {
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding: 0 2px;
 }
 
 .author {
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
   text-align: right;
   color: var(--color-text-caption);
+  padding: 0 15px;
 }
